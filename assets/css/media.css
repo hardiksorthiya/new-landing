@@ -1,0 +1,65 @@
+ /* Ensuring proper visibility on small screens */
+ @media (max-width: 768px) {
+   .sidebar {
+     left: -100%;
+     width: 250px;
+   }
+
+   .sidebar.open {
+     left: 0;
+   }
+
+   .card-body-research-sec {
+     height: 308px;
+   }
+ }
+
+
+
+ @media (max-width: 1024px) {
+   .csir-first-menu {
+     display: none !important;
+   }
+ }
+
+
+ @media (max-width: 430px) {
+   .social-icons a img {
+     width: 50px;
+     margin: 20px;
+   }
+
+   .top-up-home.d-flex {
+     justify-content: flex-end;
+   }
+   .slider-makein-india {
+    position: absolute;
+    top: 48%;
+    right: 10%;
+}
+img.back-make-india {
+  width: 196px;
+}
+.make-india-text h3 {
+  font-size: 10px;
+}
+.make-india-text h5, .make-india-text p {
+  font-size: 6px;
+}
+section#hero {
+  margin-top: 116px;
+}
+ }
+
+ @media (max-width: 321px) {
+   h4.logo-name {
+     font-size: 14px;
+   }
+
+   h5.logo-area {
+     font-size: 12px;
+   }
+   section#hero {
+    margin-top: 42%;
+}
+ }
