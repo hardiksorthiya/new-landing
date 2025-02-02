@@ -63,3 +63,9 @@ section#hero {
     margin-top: 42%;
 }
  }
+
+ @media (min-width: 1700px) {
+ .slider-container {
+  height: 92vh;
+}
+ }

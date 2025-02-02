@@ -17,6 +17,18 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/aos.js"></script>
+    <!-- language translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,hi,kn',  // Languages to be included (English, Hindi, Kannada)
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 </head>
 
 <body id="csir-nal-landing-page">
@@ -211,7 +223,7 @@
                     </div>
                 </div>
                 <!-- Navigation Arrows -->
-                <button class="slider-arrow arrow-left" id="prevSlide">
+                <button class="slider-arrow arrow-left d-none" id="prevSlide">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.91 58">
                         <defs>
                             <style>
@@ -232,9 +244,8 @@
                         <path class="clsa-2"
                             d="M16.27,29.71a1,1,0,0,1,0-1.42l6.36-6.36a1,1,0,0,1,1.42,0,1,1,0,0,1,0,1.41L18.39,29l5.66,5.66a1,1,0,0,1,0,1.41,1,1,0,0,1-1.42,0ZM40.94,30H17V28h24Z" />
                     </svg>
-                    <!-- <img src="assets/images/left.svg" alt="Previous Slide"> -->
                 </button>
-                <button class="slider-arrow arrow-right" id="nextSlide">
+                <button class="slider-arrow arrow-right d-none" id="nextSlide">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.91 58">
                         <defs>
                             <style>
@@ -273,19 +284,25 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col d-flex flex-column align-items-center">
-                    <h2 class="text-center title-csir-nal-heading">Our topics</h2>
-                    <h5 class="text-center subtitle-csir-nal-heading">CSIR-NAL develops innovations that provide
+                    <h2 class="text-center title-csir-nal-heading" data-aos="fade-up" data-aos-delay="500"
+                    data-aos-duration="1000">Our topics</h2>
+                    <h5 class="text-center subtitle-csir-nal-heading" data-aos="fade-up" data-aos-delay="600"
+                    data-aos-duration="1000"><strong>CSIR-NAL</strong> develops innovations that provide
                         solutions to the major challenges of our time. How? It’s all explained in our focus topics</h5>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="card csir-hp-card" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card csir-hp-card" data-aos="flip-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-delay="1000"
+                    data-aos-duration="1000"
+                    data-aos-offset="1000">
                         <div class="image-section-card">
                             <img src="assets/images/topics/Technology.png" alt="Technology" class="card-img-top">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title-csir-hp text-center">Technologies</h3>
+                            <h2 class="card-title-csir-hp text-center">Technologies</h2>
                             <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
@@ -293,12 +310,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="card csir-hp-card" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card csir-hp-card" data-aos="flip-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-delay="1200"
+                    data-aos-duration="1200"
+                    data-aos-offset="1200">
                         <div class="image-section-card">
                             <img src="assets/images/topics/Facility.png" alt="Facility" class="card-img-top">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title-csir-hp text-center">Facility</h3>
+                            <h2 class="card-title-csir-hp text-center">Facility</h2>
                             <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
@@ -306,12 +327,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="card csir-hp-card" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card csir-hp-card" data-aos="flip-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-delay="1400"
+                    data-aos-duration="1200"
+                    data-aos-offset="1200">
                         <div class="image-section-card">
                             <img src="assets/images/topics/Research.png" alt="Research" class="card-img-top">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title-csir-hp text-center">Research</h3>
+                            <h2 class="card-title-csir-hp text-center">Research</h2>
                             <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
@@ -319,12 +344,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="card csir-hp-card" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card csir-hp-card" data-aos="flip-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-delay="1600"
+                    data-aos-duration="1200"
+                    data-aos-offset="1200">
                         <div class="image-section-card">
                             <img src="assets/images/topics/Business.png" alt="Business" class="card-img-top">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title-csir-hp text-center">Business</h3>
+                            <h2 class="card-title-csir-hp text-center">Business</h2>
                             <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
@@ -355,17 +384,21 @@
             <div class="row">
                 <div class="row justify-content-center">
                     <div class="col d-flex flex-column align-items-center">
-                        <h2 class="text-center title-csir-nal-heading-direction">Connect your Research Activity with
+                        <h2 class="text-center title-csir-nal-heading-direction" data-aos="fade-up" data-aos-delay="500"
+                        data-aos-duration="1000">Connect your Research Activity with
                             CSIR-NAL</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 d-flex pad-zero-hp">
-                    <div class="card image-and-text-box-csir-nal-hp" data-aos="fade-up" data-aos-duration="3000">
-                        <div class="card-body card-body-research-sec">
-                            <h3 class="card-title-csir-hp text-center">Directors Desk</h3>
-                            <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
+                    <div class="card image-and-text-box-csir-nal-hp">
+                        <div class="card-body card-body-research-sec" data-aos="zoom-in-down" data-aos-delay="500"
+                        data-aos-duration="1000">
+                            <h3 class="card-title-csir-hp text-center" data-aos="zoom-out-right" data-aos-delay="700"
+                            data-aos-duration="1000">Directors Desk</h3>
+                            <p class="text-center text-black" data-aos="zoom-out-right" data-aos-delay="900"
+                            data-aos-duration="1000">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
                         </div>
@@ -376,24 +409,30 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex pad-zero-hp">
-                    <div class="card image-and-text-box-csir-nal-hp" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card image-and-text-box-csir-nal-hp">
                         <div class="image-section-card-research">
                             <img src="assets/images/research/MissionVision.png" alt="Technology"
                                 class="card-img-research">
                         </div>
-                        <div class="card-body card-body-research-sec">
-                            <h3 class="card-title-csir-hp text-center">Mission & Vision</h3>
-                            <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
+                        <div class="card-body card-body-research-sec" data-aos="zoom-in-up" data-aos-delay="500"
+                        data-aos-duration="1000">
+                            <h3 class="card-title-csir-hp text-center" data-aos="zoom-out-left" data-aos-delay="700"
+                            data-aos-duration="1000">Mission & Vision</h3>
+                            <p class="text-center text-black" data-aos="zoom-out-left" data-aos-delay="900"
+                            data-aos-duration="1000">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex pad-zero-hp">
-                    <div class="card image-and-text-box-csir-nal-hp" data-aos="fade-up" data-aos-duration="3000">
-                        <div class="card-body card-body-research-sec">
-                            <h3 class="card-title-csir-hp text-center">Speak to our Experts</h3>
-                            <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
+                    <div class="card image-and-text-box-csir-nal-hp">
+                        <div class="card-body card-body-research-sec" data-aos="zoom-out-left" data-aos-delay="500"
+                        data-aos-duration="1000">
+                            <h3 class="card-title-csir-hp text-center" data-aos="zoom-out-left" data-aos-delay="700"
+                            data-aos-duration="1000">Speak to our Experts</h3>
+                            <p class="text-center text-black" data-aos="zoom-out-left" data-aos-delay="700"
+                            data-aos-duration="1000">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
                         </div>
@@ -404,13 +443,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex pad-zero-hp">
-                    <div class="card image-and-text-box-csir-nal-hp" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card image-and-text-box-csir-nal-hp">
                         <div class="image-section-card-research">
                             <img src="assets/images/research/FeaturedRD.png" alt="Technology" class="card-img-research">
                         </div>
-                        <div class="card-body card-body-research-sec">
-                            <h3 class="card-title-csir-hp text-center">Featured R&D</h3>
-                            <p class="text-center text-black">Lorem Ipsum has been the industry's standard dummy text
+                        <div class="card-body card-body-research-sec" data-aos="zoom-out-left" data-aos-delay="500"
+                        data-aos-duration="1000">
+                            <h3 class="card-title-csir-hp text-center" data-aos="zoom-out-left" data-aos-delay="700"
+                            data-aos-duration="1000">Featured R&D</h3>
+                            <p class="text-center text-black" data-aos="zoom-out-left" data-aos-delay="700"
+                            data-aos-duration="1000">Lorem Ipsum has been the industry's standard dummy text
                                 ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 make a type specimen book.</p>
                         </div>
@@ -420,14 +462,10 @@
         </div>
     </section>
     <!-- image-banner-section -->
-    <section class="image-banner-csir-nal my-50" style="background-image: url('assets/images/bannerImage.png');">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="text-center text-white banner-text-hp">We Connect the Regions</div>
-                </div>
-            </div>
-        </div>
+    <section class="fade-section">
+        <div class="background" id="background1" style="opacity: 1;"></div>
+        <div class="background" id="background2" style="opacity: 0;"></div>
+        <h1>We Connect the Regions</h1>
     </section>
     <!-- news -->
     <section class="news-csir-nal my-50" style="background-color: #00002E;">
@@ -445,7 +483,8 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="list-group">
-                        <div class="list-group-hp-csir-nal d-flex align-items-center">
+                        <div class="list-group-hp-csir-nal d-flex align-items-center" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-duration="600">
                             <div class="text-center pt-3 text-white hp-csir-nal-date">
                                 <h4 class="date-hp-csir-nal-news">18</h4>
                                 <small>Jan</small>
@@ -459,7 +498,8 @@
                             </div>
                         </div>
 
-                        <div class="list-group-hp-csir-nal d-flex align-items-center">
+                        <div class="list-group-hp-csir-nal d-flex align-items-center" data-aos="fade-up" data-aos-delay="500"
+                        data-aos-duration="600">
                             <div class="text-center pt-3 text-white hp-csir-nal-date">
                                 <h4 class="date-hp-csir-nal-news">17</h4>
                                 <small>Feb</small>
@@ -474,7 +514,8 @@
                             </div>
                         </div>
 
-                        <div class="list-group-hp-csir-nal d-flex align-items-center">
+                        <div class="list-group-hp-csir-nal d-flex align-items-center" data-aos="fade-up" data-aos-delay="700"
+                        data-aos-duration="600">
                             <div class="text-center pt-3 text-white hp-csir-nal-date">
                                 <h4 class="date-hp-csir-nal-news">16</h4>
                                 <small>Mar</small>
@@ -488,7 +529,8 @@
                             </div>
                         </div>
 
-                        <div class="list-group-hp-csir-nal d-flex align-items-center">
+                        <div class="list-group-hp-csir-nal d-flex align-items-center" data-aos="fade-up" data-aos-delay="900"
+                        data-aos-duration="600">
                             <div class="text-center pt-3 text-white hp-csir-nal-date">
                                 <h4 class="date-hp-csir-nal-news">16</h4>
                                 <small>Mar</small>
@@ -528,112 +570,132 @@
     <!-- video section -->
     <section class="video-section-csir">
         <div class="container mt-5">
-            <div class="video-container">
-                <video id="videoPlayer" width="100%" height="100%">
-                    <source src="assets/images/video/cloudes.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="play-button" id="playButton"></div>
-            </div>
-            <div class="controls d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="video-container" data-aos="zoom-out-right" data-aos-delay="300"
+                    data-aos-duration="600">
+                        <video id="videoPlayer" width="100%" height="100%">
+                            <source src="assets/images/video/cloudes.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="play-button" id="playButton"></div>
+                    </div>
+                    <div class="controls d-flex align-items-center">
+        
+                        <span class="icon" id="playPause">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.79 33.24">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: none;
+                                            stroke: #231f20;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 3px;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>playone</title>
+                                <polygon class="cls-1" points="25.79 16.62 1.5 2.6 1.5 30.64 25.79 16.62" />
+                            </svg>
+                        </span>
+                        <span class="icon" id="prevVideo">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.93 33.24">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: none;
+                                            stroke: #231f20;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 3px;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>playprev</title>
+                                <polygon class="cls-1" points="4.14 16.62 28.43 30.64 28.43 2.6 4.14 16.62" />
+                                <line class="cls-1" x1="1.5" y1="30.64" x2="1.5" y2="2.6" />
+                            </svg>
+                        </span>
+                        <span class="icon" id="nextVideo">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.93 33.24">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: none;
+                                            stroke: #231f20;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 3px;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>playnext</title>
+                                <polygon class="cls-1" points="25.79 16.62 1.5 2.6 1.5 30.64 25.79 16.62" />
+                                <line class="cls-1" x1="28.43" y1="2.6" x2="28.43" y2="30.64" />
+                            </svg>
+                        </span>
+                        <input type="range" class="form-range progress-bar" id="progressBar" value="0" min="0" max="100">
+                        <span class="icon" id="muteToggle">
+                            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.47 68.62">
+                                <title>speacker</title>
+                                <path
+                                    d="M551.3,456.31q0,12.54,0,25.09a8.77,8.77,0,0,1-5.66,8.62,8.56,8.56,0,0,1-8.78-1.53q-8.05-6.42-16.06-12.86a3,3,0,0,0-2.08-.74c-1.8.06-3.61,0-5.41,0a10.74,10.74,0,0,1-11-11q0-7.59,0-15.16a10.73,10.73,0,0,1,10.95-11c1.84,0,3.68,0,5.51,0a2.86,2.86,0,0,0,2-.69q8.07-6.51,16.2-13a8.66,8.66,0,0,1,11.16,0,8.84,8.84,0,0,1,3.19,7.21Q551.29,443.77,551.3,456.31Zm-5.88.05q0-12.58,0-25.17a3,3,0,0,0-1.68-3,2.92,2.92,0,0,0-3.31.56l-16,12.8a1.47,1.47,0,0,0-.64,1.3q0,13.46,0,26.91a1.47,1.47,0,0,0,.62,1.31c3,2.35,5.93,4.73,8.89,7.11,2.41,1.93,4.81,3.88,7.24,5.79a2.84,2.84,0,0,0,4.58-1,4.62,4.62,0,0,0,.26-1.7Q545.42,468.8,545.42,456.36ZM517.89,469V443.59c-1.73,0-3.41,0-5.08,0a4.76,4.76,0,0,0-4.62,4.68c-.05,5.35,0,10.7,0,16.06a4.67,4.67,0,0,0,4,4.59C514.05,469.11,516,469,517.89,469Z"
+                                    transform="translate(-502.28 -421.99)" />
+                                <path
+                                    d="M578.76,457.26a29.63,29.63,0,0,1-7.52,19c-1.35,1.56-3.12,1.79-4.5.57s-1.28-2.91,0-4.41a24.51,24.51,0,0,0,.29-32,4.47,4.47,0,0,1-1-2,2.66,2.66,0,0,1,1.59-2.92,2.56,2.56,0,0,1,3.21.49,36.23,36.23,0,0,1,3.65,4.81C577.42,445.56,578.74,450.76,578.76,457.26Z"
+                                    transform="translate(-502.28 -421.99)" />
+                                <path
+                                    d="M567,456a18.71,18.71,0,0,1-5.12,13.21,2.86,2.86,0,0,1-3.08.91,2.82,2.82,0,0,1-2.06-2.25,3,3,0,0,1,.91-2.75,12.54,12.54,0,0,0,3.43-9.4,12.36,12.36,0,0,0-3.06-7.6,3.2,3.2,0,0,1-.91-2.42,2.94,2.94,0,0,1,5.13-1.7,18.15,18.15,0,0,1,4.52,9.57C566.92,454.46,567,455.41,567,456Z"
+                                    transform="translate(-502.28 -421.99)" />
+                                <path
+                                    d="M517.89,469c-1.94,0-3.84.15-5.71,0a4.67,4.67,0,0,1-4-4.59c0-5.36-.05-10.71,0-16.06a4.76,4.76,0,0,1,4.62-4.68c1.67-.05,3.35,0,5.08,0Z"
+                                    transform="translate(-502.28 -421.99)" />
+                            </svg>
+                        </span>
+                        <div class="dropdown">
+                            <span class="icon dropdown-toggle" id="settingsIcon" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 383.32 383.38">
+                                    <title>setting</title>
+                                    <path
+                                        d="M634.56,697.18H591.14a9.09,9.09,0,0,0-1.35-.62c-11-2.89-17.11-10.17-18.68-21.28q-1.8-12.78-3.16-25.62c-.27-2.57-1.2-3.89-3.7-4.79-5.38-1.93-10.67-4.16-15.87-6.55-2.07-1-3.48-1-5.32.5q-10.21,8.2-20.66,16.1c-11,8.37-23.32,7.62-33.11-2q-12-11.82-23.82-23.82c-9.68-9.8-10.42-22.1-2-33.09,5.38-7,10.91-14,16.19-21.06a5.11,5.11,0,0,0,.55-4.18c-2.19-5.82-4.57-11.58-7.18-17.23a5.66,5.66,0,0,0-3.6-2.85c-8.5-1.27-17-2.28-25.59-3.27-13.81-1.61-22.58-11.28-22.61-25.13,0-11.6-.09-23.21,0-34.81a23.35,23.35,0,0,1,19.49-23.18c9.33-1.55,18.76-2.59,28.17-3.68a4.7,4.7,0,0,0,4.51-3.53,134.07,134.07,0,0,1,6.25-15.18c1.48-2.95,1.1-4.8-.9-7.23-5.22-6.36-10.19-12.93-15.2-19.46-8.54-11.14-7.78-23.49,2.05-33.39q11.73-11.82,23.56-23.55c9.82-9.75,22.09-10.61,33.07-2.27,7,5.35,14,10.91,21,16.2a5.12,5.12,0,0,0,4.16.73q8.92-3.33,17.58-7.3a5.61,5.61,0,0,0,2.71-3.72c1.26-8.51,2.23-17.06,3.27-25.6,1.67-13.83,11.3-22.41,25.27-22.44,11.48,0,23-.08,34.43,0,11.84.1,21.45,8,23.4,19.67,1.54,9.21,2.58,18.52,3.63,27.8.29,2.58,1.24,3.87,3.72,4.77,5.49,2,10.9,4.26,16.2,6.72a4.11,4.11,0,0,0,5-.63c6.73-5.36,13.55-10.61,20.35-15.88,11.12-8.6,23.45-8,33.4,1.8q12,11.81,23.82,23.82c9.69,9.85,10.42,22.13,2,33.11-5.38,7-10.92,13.94-16.2,21a5.1,5.1,0,0,0-.56,4.19c2.19,5.82,4.57,11.58,7.18,17.22a5.65,5.65,0,0,0,3.59,2.86c8.51,1.27,17.05,2.28,25.6,3.27,7.56.88,14,3.87,18.2,10.37,1.93,3,3,6.51,4.42,9.79v43.43a8.18,8.18,0,0,0-.62,1.35c-2.9,11-10.18,17.11-21.29,18.69q-12.76,1.8-25.6,3.15a4.88,4.88,0,0,0-4.76,3.73A150,150,0,0,1,746,569.33c-1.25,2.59-1.27,4.3.62,6.61,5.39,6.54,10.52,13.3,15.67,20,8.36,10.95,7.62,23.26-2.06,33.11q-11.81,12-23.82,23.83c-9.81,9.67-22.17,10.4-33.09,2-6.93-5.32-13.83-10.66-20.66-16.09a4.13,4.13,0,0,0-5-.65c-5.42,2.5-10.94,4.82-16.54,6.88a4.39,4.39,0,0,0-3.32,4.25c-.7,6.69-1.54,13.37-2.42,20.05-.82,6.16-1.26,12.4-5.12,17.74S640.79,695.39,634.56,697.18Zm-26.38-55.1c75.06,2.36,137.71-56,141.28-131.58,3.5-73.94-55.54-137.73-132-141.54-73.81-3.68-137.28,55.47-141.19,131.58C472.49,574.64,531.57,638.05,608.18,642.08Z"
+                                        transform="translate(-421.17 -313.8)" />
+                                </svg>
+                            </span>
+                            <ul class="dropdown-menu" aria-labelledby="settingsIcon">
+                                <li><button class="dropdown-item" id="downloadVideo">Download</button></li>
+                                <li>
+                                    <select class="form-select btn-sm" id="playbackSpeed">
+                                        <option value="0.5">0.5x</option>
+                                        <option value="1" selected>1x</option>
+                                        <option value="1.5">1.5x</option>
+                                        <option value="2">2x</option>
+                                    </select>
+                                </li>
+                                <li><button class="dropdown-item" id="pictureInPicture">Picture-in-Picture</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <video controls style="width: 100%;" data-aos="zoom-out-left" data-aos-delay="300"
+                    data-aos-duration="600">
+                        <source src="assets/images/video/cloudes.mp4" type="video/mp4" >
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls style="width: 100%;" class="mt-1" data-aos="zoom-out-left" data-aos-delay="500"
+                    data-aos-duration="600">
+                        <source src="assets/images/video/cloudes.mp4" type="video/mp4" >
+                        Your browser does not support the video tag.
+                    </video>
 
-                <span class="icon" id="playPause">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.79 33.24">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: none;
-                                    stroke: #231f20;
-                                    stroke-miterlimit: 10;
-                                    stroke-width: 3px;
-                                }
-                            </style>
-                        </defs>
-                        <title>playone</title>
-                        <polygon class="cls-1" points="25.79 16.62 1.5 2.6 1.5 30.64 25.79 16.62" />
-                    </svg>
-                </span>
-                <span class="icon" id="prevVideo">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.93 33.24">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: none;
-                                    stroke: #231f20;
-                                    stroke-miterlimit: 10;
-                                    stroke-width: 3px;
-                                }
-                            </style>
-                        </defs>
-                        <title>playprev</title>
-                        <polygon class="cls-1" points="4.14 16.62 28.43 30.64 28.43 2.6 4.14 16.62" />
-                        <line class="cls-1" x1="1.5" y1="30.64" x2="1.5" y2="2.6" />
-                    </svg>
-                </span>
-                <span class="icon" id="nextVideo">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.93 33.24">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: none;
-                                    stroke: #231f20;
-                                    stroke-miterlimit: 10;
-                                    stroke-width: 3px;
-                                }
-                            </style>
-                        </defs>
-                        <title>playnext</title>
-                        <polygon class="cls-1" points="25.79 16.62 1.5 2.6 1.5 30.64 25.79 16.62" />
-                        <line class="cls-1" x1="28.43" y1="2.6" x2="28.43" y2="30.64" />
-                    </svg>
-                </span>
-                <input type="range" class="form-range progress-bar" id="progressBar" value="0" min="0" max="100">
-                <span class="icon" id="muteToggle">
-                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.47 68.62">
-                        <title>speacker</title>
-                        <path
-                            d="M551.3,456.31q0,12.54,0,25.09a8.77,8.77,0,0,1-5.66,8.62,8.56,8.56,0,0,1-8.78-1.53q-8.05-6.42-16.06-12.86a3,3,0,0,0-2.08-.74c-1.8.06-3.61,0-5.41,0a10.74,10.74,0,0,1-11-11q0-7.59,0-15.16a10.73,10.73,0,0,1,10.95-11c1.84,0,3.68,0,5.51,0a2.86,2.86,0,0,0,2-.69q8.07-6.51,16.2-13a8.66,8.66,0,0,1,11.16,0,8.84,8.84,0,0,1,3.19,7.21Q551.29,443.77,551.3,456.31Zm-5.88.05q0-12.58,0-25.17a3,3,0,0,0-1.68-3,2.92,2.92,0,0,0-3.31.56l-16,12.8a1.47,1.47,0,0,0-.64,1.3q0,13.46,0,26.91a1.47,1.47,0,0,0,.62,1.31c3,2.35,5.93,4.73,8.89,7.11,2.41,1.93,4.81,3.88,7.24,5.79a2.84,2.84,0,0,0,4.58-1,4.62,4.62,0,0,0,.26-1.7Q545.42,468.8,545.42,456.36ZM517.89,469V443.59c-1.73,0-3.41,0-5.08,0a4.76,4.76,0,0,0-4.62,4.68c-.05,5.35,0,10.7,0,16.06a4.67,4.67,0,0,0,4,4.59C514.05,469.11,516,469,517.89,469Z"
-                            transform="translate(-502.28 -421.99)" />
-                        <path
-                            d="M578.76,457.26a29.63,29.63,0,0,1-7.52,19c-1.35,1.56-3.12,1.79-4.5.57s-1.28-2.91,0-4.41a24.51,24.51,0,0,0,.29-32,4.47,4.47,0,0,1-1-2,2.66,2.66,0,0,1,1.59-2.92,2.56,2.56,0,0,1,3.21.49,36.23,36.23,0,0,1,3.65,4.81C577.42,445.56,578.74,450.76,578.76,457.26Z"
-                            transform="translate(-502.28 -421.99)" />
-                        <path
-                            d="M567,456a18.71,18.71,0,0,1-5.12,13.21,2.86,2.86,0,0,1-3.08.91,2.82,2.82,0,0,1-2.06-2.25,3,3,0,0,1,.91-2.75,12.54,12.54,0,0,0,3.43-9.4,12.36,12.36,0,0,0-3.06-7.6,3.2,3.2,0,0,1-.91-2.42,2.94,2.94,0,0,1,5.13-1.7,18.15,18.15,0,0,1,4.52,9.57C566.92,454.46,567,455.41,567,456Z"
-                            transform="translate(-502.28 -421.99)" />
-                        <path
-                            d="M517.89,469c-1.94,0-3.84.15-5.71,0a4.67,4.67,0,0,1-4-4.59c0-5.36-.05-10.71,0-16.06a4.76,4.76,0,0,1,4.62-4.68c1.67-.05,3.35,0,5.08,0Z"
-                            transform="translate(-502.28 -421.99)" />
-                    </svg>
-                </span>
-                <div class="dropdown">
-                    <span class="icon dropdown-toggle" id="settingsIcon" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 383.32 383.38">
-                            <title>setting</title>
-                            <path
-                                d="M634.56,697.18H591.14a9.09,9.09,0,0,0-1.35-.62c-11-2.89-17.11-10.17-18.68-21.28q-1.8-12.78-3.16-25.62c-.27-2.57-1.2-3.89-3.7-4.79-5.38-1.93-10.67-4.16-15.87-6.55-2.07-1-3.48-1-5.32.5q-10.21,8.2-20.66,16.1c-11,8.37-23.32,7.62-33.11-2q-12-11.82-23.82-23.82c-9.68-9.8-10.42-22.1-2-33.09,5.38-7,10.91-14,16.19-21.06a5.11,5.11,0,0,0,.55-4.18c-2.19-5.82-4.57-11.58-7.18-17.23a5.66,5.66,0,0,0-3.6-2.85c-8.5-1.27-17-2.28-25.59-3.27-13.81-1.61-22.58-11.28-22.61-25.13,0-11.6-.09-23.21,0-34.81a23.35,23.35,0,0,1,19.49-23.18c9.33-1.55,18.76-2.59,28.17-3.68a4.7,4.7,0,0,0,4.51-3.53,134.07,134.07,0,0,1,6.25-15.18c1.48-2.95,1.1-4.8-.9-7.23-5.22-6.36-10.19-12.93-15.2-19.46-8.54-11.14-7.78-23.49,2.05-33.39q11.73-11.82,23.56-23.55c9.82-9.75,22.09-10.61,33.07-2.27,7,5.35,14,10.91,21,16.2a5.12,5.12,0,0,0,4.16.73q8.92-3.33,17.58-7.3a5.61,5.61,0,0,0,2.71-3.72c1.26-8.51,2.23-17.06,3.27-25.6,1.67-13.83,11.3-22.41,25.27-22.44,11.48,0,23-.08,34.43,0,11.84.1,21.45,8,23.4,19.67,1.54,9.21,2.58,18.52,3.63,27.8.29,2.58,1.24,3.87,3.72,4.77,5.49,2,10.9,4.26,16.2,6.72a4.11,4.11,0,0,0,5-.63c6.73-5.36,13.55-10.61,20.35-15.88,11.12-8.6,23.45-8,33.4,1.8q12,11.81,23.82,23.82c9.69,9.85,10.42,22.13,2,33.11-5.38,7-10.92,13.94-16.2,21a5.1,5.1,0,0,0-.56,4.19c2.19,5.82,4.57,11.58,7.18,17.22a5.65,5.65,0,0,0,3.59,2.86c8.51,1.27,17.05,2.28,25.6,3.27,7.56.88,14,3.87,18.2,10.37,1.93,3,3,6.51,4.42,9.79v43.43a8.18,8.18,0,0,0-.62,1.35c-2.9,11-10.18,17.11-21.29,18.69q-12.76,1.8-25.6,3.15a4.88,4.88,0,0,0-4.76,3.73A150,150,0,0,1,746,569.33c-1.25,2.59-1.27,4.3.62,6.61,5.39,6.54,10.52,13.3,15.67,20,8.36,10.95,7.62,23.26-2.06,33.11q-11.81,12-23.82,23.83c-9.81,9.67-22.17,10.4-33.09,2-6.93-5.32-13.83-10.66-20.66-16.09a4.13,4.13,0,0,0-5-.65c-5.42,2.5-10.94,4.82-16.54,6.88a4.39,4.39,0,0,0-3.32,4.25c-.7,6.69-1.54,13.37-2.42,20.05-.82,6.16-1.26,12.4-5.12,17.74S640.79,695.39,634.56,697.18Zm-26.38-55.1c75.06,2.36,137.71-56,141.28-131.58,3.5-73.94-55.54-137.73-132-141.54-73.81-3.68-137.28,55.47-141.19,131.58C472.49,574.64,531.57,638.05,608.18,642.08Z"
-                                transform="translate(-421.17 -313.8)" />
-                        </svg>
-                    </span>
-                    <ul class="dropdown-menu" aria-labelledby="settingsIcon">
-                        <li><button class="dropdown-item" id="downloadVideo">Download</button></li>
-                        <li>
-                            <select class="form-select btn-sm" id="playbackSpeed">
-                                <option value="0.5">0.5x</option>
-                                <option value="1" selected>1x</option>
-                                <option value="1.5">1.5x</option>
-                                <option value="2">2x</option>
-                            </select>
-                        </li>
-                        <li><button class="dropdown-item" id="pictureInPicture">Picture-in-Picture</button></li>
-                    </ul>
                 </div>
             </div>
+            
         </div>
     </section>
     <!-- footer -->
-    <footer class="csir-footer" style="background-color: #00002E;">
+    <footer class="csir-footer" style="background-color: #00002E;" data-aos="fade-up"
+    data-aos-duration="600">
         <div class="container">
             <div class="row text-white">
                 <div class="col-lg-4">
@@ -700,6 +762,7 @@
                     <h5>Copyright 2025 nal.res.in. All rights reserved</h5>
                 </div>
                 <div class="col-lg-6">
+                    
                     <div class="goverment-logo d-flex">
                         <a href="#"><img src="assets/images/footer/ITU.png" alt=""></a>
                         <a href="#"><img src="assets/images/footer/Digital.png" alt=""></a>
@@ -710,6 +773,17 @@
                 </div>
                 <div class="col-lg-2">
                     <div class="top-up-home d-flex">
+                        <div id="language-icon-container">
+                            <!-- Language Icon (Globe Icon) -->
+                            <div id="language-icon">🌐</div>
+                        
+                            <!-- Dropdown for Language Selection -->
+                            <div id="language-dropdown">
+                              <div class="language-option" onclick="changeLanguage('en')">English</div>
+                              <div class="language-option" onclick="changeLanguage('hi')">हिन्दी</div>
+                              <div class="language-option" onclick="changeLanguage('kn')">ಕನ್ನಡ</div>
+                            </div>
+                          </div>
                         <a href="#hero"><img src="assets/images/footer/arrow.png" alt=""></a>
                         <a href="#"><img src="assets/images/footer/home.png" alt=""></a>
                     </div>

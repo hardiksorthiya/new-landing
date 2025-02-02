@@ -25,16 +25,16 @@ document.addEventListener('click', (e) => {
 });
 
 // Hide header on scroll down, show on scroll up
-let lastScrollTop = 0;
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScroll > lastScrollTop) {
-    header.classList.add('hidden'); // Scroll down
-  } else {
-    header.classList.remove('hidden'); // Scroll up
-  }
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+// let lastScrollTop = 0;
+// window.addEventListener('scroll', () => {
+//   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+//   if (currentScroll > lastScrollTop) {
+//     header.classList.add('hidden'); 
+//   } else {
+//     header.classList.remove('hidden'); 
+//   }
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+// });
 
 // Toggle search bar
 searchToggle.addEventListener('click', (e) => {
@@ -216,5 +216,61 @@ muteToggle.addEventListener('click', () => {
 });
 
 
+
+// image background change
+
+const images = [
+  { url: 'assets/images/bannerImage.png', effect: 'zoom-out' },
+  { url: 'assets/images/slider/2.png', effect: 'fade-right' },
+  { url: 'assets/images/slider/1.png', effect: 'fade-left' }
+];
+let index = 0;
+const bg1 = document.getElementById('background1');
+const bg2 = document.getElementById('background2');
+
+function changeBackground() {
+  const nextIndex = (index + 1) % images.length;
+  const activeBg = index % 2 === 0 ? bg1 : bg2;
+  const inactiveBg = index % 2 === 0 ? bg2 : bg1;
+  
+  inactiveBg.style.backgroundImage = `url(${images[nextIndex].url})`;
+  inactiveBg.style.opacity = 1;
+  inactiveBg.className = `background ${images[nextIndex].effect}`;
+  activeBg.style.opacity = 0;
+  activeBg.className = 'background';
+  
+  index = nextIndex;
+}
+
+setInterval(changeBackground, 3000);
+bg1.style.backgroundImage = `url(${images[0].url})`;
+bg2.style.backgroundImage = `url(${images[1].url})`;
+
+
+// footer lab=ngaue
+
+document.getElementById('language-icon').onclick = function() {
+  var dropdown = document.getElementById('language-dropdown');
+  dropdown.classList.toggle('show');
+};
+
+// Function to change language
+function changeLanguage(language) {
+  // Set the page language and update Google Translate
+  googleTranslateElementInit();
+  var translateElement = new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,hi,kn',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  });
+  translateElement.translatePage(language);
+  
+  // Close the dropdown after selection
+  document.getElementById('language-dropdown').classList.remove('show');
+}
+
+
+
 // animation
+
 AOS.init();

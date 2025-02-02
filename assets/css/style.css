@@ -28,7 +28,9 @@ a {
   color: var(--link-color-csir-nal);
   text-decoration: none !important;
 }
-
+p {
+  font-size: 12pt;
+}
 a:hover,
 a:focus {
   text-decoration: none;
@@ -46,7 +48,9 @@ ol {
 img {
   width: 100%;
 }
-
+body {
+  overflow-x: hidden;
+}
 /* Header Styling */
 .custom-header {
   position: fixed;
@@ -64,8 +68,8 @@ img {
 }
 
 .logo {
-  max-height: 78px;
-  width: 60px;
+  max-height: 94px;
+  width: 75px;
 }
 
 .logo-name,
@@ -210,26 +214,25 @@ img {
 ul.sidebar-in-tab-phone {
   padding: 0;
 }
-
+section.header-csir-nal-hp {
+  padding-bottom: 90px;
+}
 /* slider */
 
 .hero {
   position: relative;
   width: 100%;
-  /* height: 100vh; */
   overflow: hidden;
 }
 
 .slider-container {
   width: 100%;
-  /* height: 100%; */
   position: relative;
 }
 
 .slider {
   display: flex;
   transition: transform 1.5s ease-in-out;
-  /* height: 100%; */
 }
 
 .slide {
@@ -289,9 +292,9 @@ ul.sidebar-in-tab-phone {
   color: #fff;
 }
 
-section#hero {
+/* section#hero {
   margin-top: 64px;
-}
+} */
 
 /* Navigation Dots */
 .slider-nav {
@@ -348,9 +351,13 @@ button#nextSlide:hover path.clsa-1 {
   font-size: 54pt;
   font-weight: 600;
 }
-
 .subtitle-csir-nal-heading {
+  font-size: 15pt;
+  color: #5B5B5B;
   max-width: 900px;
+}
+.csir-hp-card p {
+  padding-bottom: 20%;
 }
 
 .csir-hp-card img {
@@ -442,17 +449,54 @@ img.back-make-india {
 }
 
 /* banner image */
-.banner-text-hp {
+.fade-section {
+  position: relative;
+  height: 596px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+.fade-section .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.5s ease-in-out;
+}
+.fade-section .background.zoom-out {
+  animation: zoomOut 1.5s ease-in-out;
+}
+.fade-section .background.fade-right {
+  animation: fadeRight 1.5s ease-in-out;
+}
+.fade-section .background.fade-left {
+  animation: fadeLeft 1.5s ease-in-out;
+}
+.fade-section h1 {
   font-size: 48pt;
   padding: 250px 0;
   text-shadow: 2px 2px 10px black;
   font-weight: 700;
+  position: relative;
+  z-index: 2;
 }
-
-section.image-banner-csir-nal {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+@keyframes zoomOut {
+  0% { opacity: 0; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
 /* annoucement */
@@ -569,10 +613,21 @@ svg#Layer_3 {
 }
 
 .social-icons a img {
-  width: 80px;
-  margin: 10px;
+  width: 70px;
+  margin: 20px;
+  animation: zoom-in-zoom-out 5s ease-out infinite;
 }
-
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 .qr-code img {
   width: 140px;
   margin: 10px;
@@ -588,11 +643,6 @@ ul.footer-external-links {
 
 ul.footer-external-links li {
   line-height: 36px;
-}
-
-.social-icons a img {
-  width: 100px;
-  margin: 20px;
 }
 
 h4.footer-title-logo {
@@ -621,4 +671,56 @@ footer {
 
 .top-up-home img {
   width: 60px;
+}
+#language-icon-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Language Icon Style (Globe or language flag) */
+#language-icon {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Dropdown container (hidden by default) */
+#language-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust position */
+  right: 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  padding: 10px 0;
+}
+
+/* Dropdown items */
+.language-option {
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+/* Hover effect on dropdown items */
+.language-option:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown when icon is clicked */
+#language-dropdown.show {
+  display: block;
 }
