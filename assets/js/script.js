@@ -249,25 +249,7 @@ bg2.style.backgroundImage = `url(${images[1].url})`;
 
 // footer lab=ngaue
 
-document.getElementById('language-icon').onclick = function() {
-  var dropdown = document.getElementById('language-dropdown');
-  dropdown.classList.toggle('show');
-};
 
-// Function to change language
-function changeLanguage(language) {
-  // Set the page language and update Google Translate
-  googleTranslateElementInit();
-  var translateElement = new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,hi,kn',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  });
-  translateElement.translatePage(language);
-  
-  // Close the dropdown after selection
-  document.getElementById('language-dropdown').classList.remove('show');
-}
 
 
 
