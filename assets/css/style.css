@@ -607,7 +607,9 @@ svg#Layer_3 {
 .footer {
   padding: 40px 0;
 }
-
+section.footer-bottam-band {
+    padding: 10px 0;
+}
 .footer h5 {
   font-weight: bold;
 }
@@ -658,6 +660,7 @@ p.add-ftr-detail {
 
 ul.footer-external-links li a {
   font-size: 20px;
+  font-weight: 300;
 }
 
 p.scnner-text {
@@ -670,7 +673,7 @@ footer {
 }
 
 .top-up-home img {
-  width: 60px;
+  width: 40px;
 }
 #language-icon-container {
   position: fixed;
