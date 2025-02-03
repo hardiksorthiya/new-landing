@@ -270,6 +270,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// image gallery 
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+  });
+});
+
 
 
 

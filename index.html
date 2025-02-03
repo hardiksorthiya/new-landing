@@ -597,21 +597,53 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <img src="assets/images/news/1.png" class="img-fluid rounded shadow"
-                                alt="Announcement Image 1" />
+                                alt="Announcement Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1"/>
                         </div>
                         <div class="col-12">
                             <img src="assets/images/news/2.png" class="img-fluid rounded shadow"
-                                alt="Announcement Image 2" />
+                                alt="Announcement Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2"/>
                         </div>
                         <div class="col-12">
                             <img src="assets/images/news/3.png" class="img-fluid rounded shadow"
-                                alt="Announcement Image 3" />
+                                alt="Announcement Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- model for image gallery -->
+    <div class="modal fade" id="imageModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-gallery">
+                                    <a href="#">
+                                        <img src="assets/images/news/1.png" class="img-fluid">
+                                    <h4>Title</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><img src="https://via.placeholder.com/600" class="img-fluid"></div>
+                            <div class="swiper-slide"><img src="https://via.placeholder.com/600" class="img-fluid"></div>
+                            <div class="swiper-slide"><img src="https://via.placeholder.com/600" class="img-fluid"></div>
+                            <div class="swiper-slide"><img src="https://via.placeholder.com/600" class="img-fluid"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- video section -->
     <section class="video-section-csir">
         <div class="container mt-5">
@@ -863,6 +895,7 @@
             </div>
         </div>
     </section>
+    
     <!-- script -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
