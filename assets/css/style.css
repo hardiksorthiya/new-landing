@@ -436,8 +436,8 @@ img.back-make-india {
 
 .pad-zero-hp {
   padding: 0 !important;
+  overflow: hidden;
 }
-
 .image-and-text-box-csir-nal-hp {
   border: none !important;
   border-radius: 0 !important;
@@ -671,7 +671,12 @@ p.scnner-text {
 footer {
   padding: 50px 0
 }
-
+.custom-slider-container {
+  width: 100%;
+}
+.custom-slider-container .swiper-slide{
+  padding: 0;
+}
 .top-up-home img {
   width: 40px;
 }

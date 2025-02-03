@@ -247,7 +247,27 @@ bg1.style.backgroundImage = `url(${images[0].url})`;
 bg2.style.backgroundImage = `url(${images[1].url})`;
 
 
-// footer lab=ngaue
+// footer carousle
+
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".custom-slider-container", {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+      },
+      speed: 600,
+      breakpoints: {
+          1200: { slidesPerView: 5 },
+          992: { slidesPerView: 4 },
+          768: { slidesPerView: 3 },
+          576: { slidesPerView: 2 },
+          320: { slidesPerView: 1 }
+      }
+  });
+});
 
 
 
