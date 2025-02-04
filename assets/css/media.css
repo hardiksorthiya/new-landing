@@ -46,8 +46,11 @@ img.back-make-india {
 .make-india-text h5, .make-india-text p {
   font-size: 6px;
 }
-section#hero {
-  margin-top: 116px;
+.logo-name, .logo-area {
+  font-size: 14px;
+}
+a#searchToggle {
+  font-size: 0;
 }
  }
 

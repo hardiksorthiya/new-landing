@@ -289,6 +289,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// translate
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+  pageLanguage: 'en',
+  autoDisplay: 'true',
+  includedLanguages:'en,hi,kn', 
+  layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+  }, 'google_translate_element');
+  }
 
 
 // animation
