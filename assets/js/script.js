@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
           992: { slidesPerView: 4 },
           768: { slidesPerView: 3 },
           576: { slidesPerView: 2 },
-          320: { slidesPerView: 1 }
+          320: { slidesPerView: 2 }
       }
   });
 });

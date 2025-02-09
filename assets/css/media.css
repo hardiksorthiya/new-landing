@@ -20,6 +20,9 @@
    .csir-first-menu {
      display: none !important;
    }
+   section.footer-bottam-band h5 {
+    text-align: center;
+}
  }
 
 
@@ -33,12 +36,11 @@
      justify-content: flex-end;
    }
    .slider-makein-india {
-    position: absolute;
-    top: 48%;
-    right: 10%;
+    top: 20%;
+    right: 0;
 }
 img.back-make-india {
-  width: 196px;
+  width: 280px;
 }
 .make-india-text h3 {
   font-size: 10px;
@@ -67,8 +69,8 @@ a#searchToggle {
 }
  }
 
- @media (min-width: 1700px) {
+ @media (min-width: 1200px) {
  .slider-container {
-  height: 92vh;
+  height: 90vh;
 }
  }

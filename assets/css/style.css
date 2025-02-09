@@ -403,21 +403,19 @@ button#nextSlide:hover path.clsa-1 {
   text-align: center;
 }
 
-.swiper-slide::before {
-  content: "• ";
-}
 .slider-makein-india {
   position: absolute;
   top: 5%;
   right: 5%;
 }
 img.back-make-india {
-  width: 440px;
+  width: 560px;
 }
 .make-india-text h3 {
   color: #044EB7;
   font-weight: 800;
   font-size: 18px;
+  animation: zoom-in-zoom-out 5s ease-out infinite
 }
 .make-india-text h5, .make-india-text p {
   font-size: 14px;
@@ -427,7 +425,9 @@ img.back-make-india {
 .make-india-text {
   position: absolute;
   top: 38%;
-  left: 46%;
+  left: 47%;
+  text-align: center;
+  width: 39%;
 }
 /* direction and vision section */
 .title-csir-nal-heading-direction {
