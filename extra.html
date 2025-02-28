@@ -1,53 +1,89 @@
-<div id='google_translate_element'></div>
-<script>
- function googleTranslateElementInit() {
- new google.translate.TranslateElement({
- pageLanguage: 'en',
- autoDisplay: 'true',
- includedLanguages:'hi,en,bn,ar,ja,iw', // <- remove this line to show all language
- layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
- }, 'google_translate_element');
- }
-</script>
-
-
-<!-- Demo Text -->
-<p class="translate">In the heart of the bustling city, amidst the towering skyscrapers and endless streams of people, there lies a hidden oasis of tranquility. Tucked away down a narrow alley, a quaint café beckons with the aroma of freshly brewed coffee and the promise of a quiet retreat from the chaos outside. Inside, the soft murmur of conversation mingles with the gentle hum of jazz music playing in the background. The walls are adorned with local artwork, each piece telling a story of the vibrant community that calls this place home. Seated at a corner table, a young writer scribbles furiously in a worn notebook, lost in the world of their own creation. Across the room, a group of friends gathers, their laughter ringing out like a melody in the air. Outside, the city buzzes with energy, but within these walls, time seems to slow down. Here, in this cozy sanctuary, strangers become friends, and worries fade away with each sip of steaming hot coffee. As the day fades into evening, the café takes on a new glow, illuminated by the warm glow of fairy lights strung overhead.<!-- Generateed a ChatGpt --></p><br/>
-
-<!-- add "notranslate" class avoid translating -->
-<small class="notranslate">2024 Fuad Hasan Shihab</small>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<style>
-       body {
-    background-color: #fff4e4;
-    color:#2b1a12;
-    top: 0!important;
-    overflow-y: auto;
-    width:85%;
-    max-width: 1184px;
-    margin: 40px auto;
-    line-height: 1.3;
-  }
- 
-  body > .skiptranslate,.goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
-    display: none!important;
-  }
-  .goog-te-gadget {
-    color: transparent!important;
-    font-size:0px;
-  }
-  .goog-text-highlight {
-    background: none !important;
-    box-shadow: none !important;
-  }
-  #google_translate_element select{
-    background:#2b1a12;
-    color:#fff4e4;
-    border: none;
-    font-weight:bold;
-    border-radius:3px;
-    padding:8px 12px
-  }
-
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Chart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .chart-box {
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        .connector {
+            position: absolute;
+            width: 2px;
+            background: #000;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .horizontal {
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            background: #000;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="text-center position-relative">
+            <div class="chart-box bg-primary text-white p-2">Director General, CSIR</div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="row mt-2 position-relative">
+                <div class="col-md-6 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-danger text-white p-2">Research Council</div>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-danger text-white p-2">Management Council</div>
+                </div>
+            </div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="chart-box bg-danger text-white p-2 mt-2">Director, CSIR-NAL</div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="row mt-2 position-relative">
+                <div class="col-md-6 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-primary text-white p-2">Advisor (M&A)</div>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-primary text-white p-2">Advisor (W&S)</div>
+                </div>
+            </div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="chart-box bg-dark text-white p-2 mt-2">Director's Technical Secretariat</div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="row mt-3 position-relative">
+                <div class="col-md-3 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-info text-white p-2">Aerothermal Sciences Cluster</div>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-info text-white p-2">Materials Science & Technology Cluster</div>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-info text-white p-2">Structural Technology Cluster</div>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <div class="horizontal"></div>
+                    <div class="chart-box bg-info text-white p-2">Systems Engineering Cluster</div>
+                </div>
+            </div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="chart-box bg-primary text-white p-2 mt-3">Civil Aircraft Design & Certification Cluster</div>
+            <div class="connector" style="height: 20px; top: 100%;"></div>
+            <div class="chart-box bg-primary text-white p-2 mt-3">Management, Administration & Support</div>
+        </div>
+    </div>
+</body>
+</html>
