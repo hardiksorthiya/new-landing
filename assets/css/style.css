@@ -17,6 +17,7 @@
   --box-shadow-csir-nal-two: 4px 4px 70px rgba(0, 0, 0, 0.219);
   --link-color-csir-nal: #007bff;
   --font-csir-nal: csir-nal-chivo;
+  --yellow-color-csir:#f4c708;
 }
 
 div {
@@ -44,7 +45,9 @@ ol {
 .my-50 {
   margin: 50px 0;
 }
-
+.m-80{
+  margin-top: 80px;
+}
 img {
   width: 100%;
 }
@@ -717,3 +720,40 @@ body > .skiptranslate,.goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog
   gap: 10px;
 }
 
+
+
+
+
+
+/* About page */
+h2.page-title-heading-hp-csir {
+  font-weight: 700;
+}
+h2.page-title-heading-hp-csir:before {
+  content: "";
+  background: #ffbf00;
+  width: 5px;
+  height: 54px;
+  position: absolute;
+  left: -10px;
+  top: -5px;
+}
+.about-image {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.about-image img {
+  width: 80%;
+}
+.abo-csi-img:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: #f1c40f;
+  z-index: -1;
+  content: "";
+}
