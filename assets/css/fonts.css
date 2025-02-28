@@ -1,79 +1,103 @@
 @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 100;
     font-style: normal;
-    src: url(../webfonts/JosefinSans-Thin.ttf);
+    src: url(../webfonts/Chivo-Light.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 100;
+    font-style: italic;
+    src: url(../webfonts/Chivo-LightItalic.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 200;
+    font-style: normal;
+    src: url(../webfonts/Chivo-ExtraLight.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 200;
+    font-style: italic;
+    src: url(../webfonts/Chivo-ExtraLightItalic.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../webfonts/Chivo-Thin.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 300;
     font-style: italic;
     src: url(../webfonts/JosefinSans-ThinItalic.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
-    font-weight: 200;
-    font-style: normal;
-    src: url(../webfonts/JosefinSans-ExtraLight.ttf);
-  }
-  @font-face {
-    font-family: 'csir-nal-jons';
-    font-weight: 200;
-    font-style: italic;
-    src: url(../webfonts/JosefinSans-ExtraLightItalic.ttf);
-  }
-  @font-face {
-    font-family: 'csir-nal-jons';
-    font-weight: 300;
-    font-style: normal;
-    src: url(../webfonts/JosefinSans-Light.ttf);
-  }
-  @font-face {
-    font-family: 'csir-nal-jons';
-    font-weight: 300;
-    font-style: italic;
-    src: url(../webfonts/JosefinSans-LightItalic.ttf);
-  }
-  @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 400;
     font-style: normal;
-    src: url(../webfonts/JosefinSans-Medium.ttf);
+    src: url(../webfonts/Chivo-Medium.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 400;
     font-style: italic;
-    src: url(../webfonts/JosefinSans-MediumItalic.ttf);
+    src: url(../webfonts/Chivo-MediumItalic.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 500;
     font-style: normal;
-    src: url(../webfonts/JosefinSans-Regular.ttf);
+    src: url(../webfonts/Chivo-Regular.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 600;
     font-style: normal;
-    src: url(../webfonts/JosefinSans-SemiBold.ttf);
+    src: url(../webfonts/Chivo-SemiBold.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
     font-weight: 600;
     font-style: italic;
     src: url(../webfonts/JosefinSans-SemiBoldItalic.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
-    font-weight: 800;
+    font-family: 'csir-nal-chivo';
+    font-weight: 700;
     font-style: normal;
-    src: url(../webfonts/JosefinSans-Bold.ttf);
+    src: url(../webfonts/Chivo-Bold.ttf);
   }
   @font-face {
-    font-family: 'csir-nal-jons';
+    font-family: 'csir-nal-chivo';
+    font-weight: 700;
+    font-style: italic;
+    src: url(../webfonts/Chivo-BoldItalic.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 800;
+    font-style: normal;
+    src: url(../webfonts/Chivo-ExtraBold.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
     font-weight: 800;
     font-style: italic;
-    src: url(../webfonts/JosefinSans-BoldItalic.ttf);
+    src: url(../webfonts/Chivo-ExtraBoldItalic.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../webfonts/Chivo-Black.ttf);
+  }
+  @font-face {
+    font-family: 'csir-nal-chivo';
+    font-weight: 900;
+    font-style: italic;
+    src: url(../webfonts/Chivo-BlackItalic.ttf);
   }
  

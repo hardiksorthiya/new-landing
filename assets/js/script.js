@@ -10,7 +10,7 @@ const closeSearchBar = document.getElementById('closeSearchBar');
 
 // Sidebar toggle
 menuToggle.addEventListener('click', () => {
-  sidebar.classList.add('open');
+  sidebar.classList.toggle('open');
 });
 
 closeSidebar.addEventListener('click', () => {
