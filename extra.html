@@ -3,87 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Chart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>CSIR Leaders Slider</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <!-- script -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
     <style>
-        .chart-box {
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mandate-csir-section {
+            padding: 50px 0;
+        }
+
+        .page-title-heading-hp-csir {
             text-align: center;
+            font-size: 28px;
             font-weight: bold;
-            position: relative;
+            margin-bottom: 30px;
         }
-        .connector {
-            position: absolute;
-            width: 2px;
-            background: #000;
-            left: 50%;
-            transform: translateX(-50%);
+
+        .leader-hp-swiper {
+            width: 80%;
+            margin: auto;
         }
-        .horizontal {
-            height: 2px;
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .leader-text {
+            flex: 1;
+        }
+
+        .leader-text p {
+            text-align: justify;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .leader-image {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .leader-image img {
             width: 100%;
-            position: absolute;
-            top: 50%;
-            background: #000;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        .leader-name-desi-hp {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .leader-name-desi-hp h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 5px 0;
+        }
+
+        .leader-name-desi-hp h4 {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Swiper Navigation Buttons */
+        .leader-hp-swiper .swiper-button-next,
+        .leader-hp-swiper .swiper-button-prev {
+            color: #007bff;
+        }
+
+        /* Swiper Pagination */
+        .leader-hp-swiper .swiper-pagination {
+            margin-top: 20px;
+        }
+        .leader-image img {
+  width: 200px;
+  border: 3px solid var(--yellow-color-csir);
+  border-radius: 50%;
+  height: 200px;
+  background: white;
+}
+.leader-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(360deg, var(--yellow-color-csir) 70%, #ffffff 70%);
+  left: 50%;
+  width: 430px;
+}
     </style>
 </head>
-<body class="bg-light">
-    <div class="container py-5">
-        <div class="text-center position-relative">
-            <div class="chart-box bg-primary text-white p-2">Director General, CSIR</div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="row mt-2 position-relative">
-                <div class="col-md-6 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-danger text-white p-2">Research Council</div>
+<body>
+
+<section class="mandate-csir-section">
+    <div class="container">
+        <h2 class="page-title-heading-hp-csir">Our Leaders</h2>
+
+        <!-- Swiper Slider -->
+        <div class="swiper leader-hp-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="row align-items-center position-relative">
+                        <div class="col-lg-6 position-relative">
+                          <p style="text-align: justify">
+                            Shri Narendra Modi was sworn-in as India’s Prime Minister for the third time on 9th June 2024, following another decisive victory in the 2024 Parliamentary elections. This victory marked the third consecutive term for Shri Modi, further solidifying his leadership.
+                
+                          </p>
+                          <p style="text-align: justify">
+                            Shri Modi’s third term is expected to build on the foundations laid during his previous tenures, with a renewed emphasis on technological innovation, infrastructure development, and international diplomacy, further positioning India as a global powerhouse.
+                          </p>
+                          <p style="text-align: justify">
+                            PM Modi launched the ‘Make in India’ initiative to turn India into an international manufacturing powerhouse. This effort has led to transformative results. India has made significant strides in ‘Ease of Doing Business’, improving its ranking from 142 in 2014 to 63 in 2019
+                          </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="leader-image position-relative">
+                              <img
+                                src="assets/images/leaders/pm.png"
+                                alt="CSIR-NAL History"
+                              />
+                              <div class="leader-name-desi-hp text-center my-4">
+                                <h2 style="font-weight: 700;">Shri Narendra Modi</h2>
+                                <h4>President, CSIR </h4>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
                 </div>
-                <div class="col-md-6 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-danger text-white p-2">Management Council</div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="leader-content">
+                        <div class="leader-text">
+                            <p>Dr. Jitendra Singh is currently serving as the Minister of State for Science and Technology in the Government of India.</p>
+                            <p>He has played a pivotal role in promoting space and research advancements in the country.</p>
+                        </div>
+                        <div class="leader-image">
+                            <img src="assets/images/leaders/jitendra_singh.png" alt="Jitendra Singh">
+                            <div class="leader-name-desi-hp">
+                                <h2>Dr. Jitendra Singh</h2>
+                                <h4>Vice President, CSIR</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="leader-content">
+                        <div class="leader-text">
+                            <p>Dr. Shekhar C. Mande, a distinguished scientist, previously served as the Director-General of CSIR and Secretary of DSIR.</p>
+                            <p>His contributions to scientific research have made significant impacts in various fields.</p>
+                        </div>
+                        <div class="leader-image">
+                            <img src="assets/images/leaders/shekhar_mande.png" alt="Shekhar Mande">
+                            <div class="leader-name-desi-hp">
+                                <h2>Dr. Shekhar C. Mande</h2>
+                                <h4>Former DG, CSIR</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="leader-content">
+                        <div class="leader-text">
+                            <p>Dr. N Kalaiselvi is the current Director-General of CSIR, leading scientific innovations and research in India.</p>
+                            <p>She is the first woman to hold this prestigious position.</p>
+                        </div>
+                        <div class="leader-image">
+                            <img src="assets/images/leaders/n_kalaiselvi.png" alt="N Kalaiselvi">
+                            <div class="leader-name-desi-hp">
+                                <h2>Dr. N Kalaiselvi</h2>
+                                <h4>DG, CSIR</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="chart-box bg-danger text-white p-2 mt-2">Director, CSIR-NAL</div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="row mt-2 position-relative">
-                <div class="col-md-6 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-primary text-white p-2">Advisor (M&A)</div>
-                </div>
-                <div class="col-md-6 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-primary text-white p-2">Advisor (W&S)</div>
-                </div>
-            </div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="chart-box bg-dark text-white p-2 mt-2">Director's Technical Secretariat</div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="row mt-3 position-relative">
-                <div class="col-md-3 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-info text-white p-2">Aerothermal Sciences Cluster</div>
-                </div>
-                <div class="col-md-3 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-info text-white p-2">Materials Science & Technology Cluster</div>
-                </div>
-                <div class="col-md-3 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-info text-white p-2">Structural Technology Cluster</div>
-                </div>
-                <div class="col-md-3 position-relative">
-                    <div class="horizontal"></div>
-                    <div class="chart-box bg-info text-white p-2">Systems Engineering Cluster</div>
-                </div>
-            </div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="chart-box bg-primary text-white p-2 mt-3">Civil Aircraft Design & Certification Cluster</div>
-            <div class="connector" style="height: 20px; top: 100%;"></div>
-            <div class="chart-box bg-primary text-white p-2 mt-3">Management, Administration & Support</div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    var leaderSwiper = new Swiper('.leader-hp-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.leader-hp-swiper .swiper-button-next',
+            prevEl: '.leader-hp-swiper .swiper-button-prev',
+        },
+        pagination: {
+            el: '.leader-hp-swiper .swiper-pagination',
+            clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+    });
+</script>
+
 </body>
 </html>
