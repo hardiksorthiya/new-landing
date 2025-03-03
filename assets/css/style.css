@@ -929,3 +929,52 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .leaders-slider-container .swiper-wrapper {
   z-index: 0;
 }
+
+
+/* organisation Chart */
+
+.chart-1 {
+  padding: 10px;
+  background: #0073b2;
+  color: white;
+}
+.chart-2 {
+  padding: 10px;
+  background: #e94f40;
+  color: white;
+}
+.chart-2-2 {
+  margin: 0 20px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 20px;
+}
+.chart-3 {
+  background: #0073b2;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.connector:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 36px;
+  background: #a0a0a0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  z-index: -1;
+}
+.connector:before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background: #a0a0a0;
+  left: 50%;
+  top: 22px;
+  z-index: -1;
+  transform: translateX(-50%);
+}
