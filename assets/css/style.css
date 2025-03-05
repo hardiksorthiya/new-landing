@@ -777,8 +777,8 @@ h2.page-title-heading-hp-csir:before {
 .abo-csi-img:after {
   position: absolute;
   top: 0;
-  right: -70px;
-  width: 30%;
+  right: -50%;
+  width: 70%;
   height: 100%;
   background: var(--yellow-color-csir);
   z-index: -2;
