@@ -903,7 +903,6 @@ h2.page-title-heading-hp-csir:before {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(360deg, var(--yellow-color-csir) 70%, #ffffff 70%);
-  left: -1%;
   width: 430px;
 }
 .leaders-slider-container .swiper-slide {
@@ -929,6 +928,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .leaders-slider-container .swiper-wrapper {
   z-index: 0;
 }
+
 
 
 /* organisation Chart */
@@ -989,7 +989,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   content: '';
   position: absolute;
   width: 1px;
-  height: 68%;
+  height: 46%;
   background: #a0a0a0;
   right: 25%;
   transform: translateX(-50%);
