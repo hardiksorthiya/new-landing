@@ -298,9 +298,18 @@ function googleTranslateElementInit() {
   includedLanguages:'en,hi,kn', 
   layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
   }, 'google_translate_element');
-  }
 
+  const observer = new MutationObserver(() => {
+    let select = document.querySelector("#google_translate_element select");
+    if (select) {
+      select.options[0].textContent = "English"; // Change first option text
+      observer.disconnect(); // Stop observing once it's done
+    }
+  });
 
+  observer.observe(document.body, { childList: true, subtree: true });
+  
+}
 // animation
 
 AOS.init();
