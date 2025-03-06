@@ -1,69 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowchart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Careers Table</title>
     <style>
-        .box {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
+        .career-container {
+            font-family: Arial, sans-serif;
+            width: 90%;
+            margin: auto;
+            background: #f9f9f9;
+        }
+
+        .career-title {
+            font-size: 24px;
             font-weight: bold;
-            position: relative;
         }
-        .connector {
-            position: relative;
-        }
-        .connector::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 20px;
-            background: black;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .horizontal-line::after {
-            content: '';
-            position: absolute;
+
+        .career-table {
             width: 100%;
-            height: 2px;
-            background: black;
-            top: 50%;
-            left: 0;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+        }
+
+        .career-th,
+        .career-td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            position: relative;
+        }
+
+        .career-th {
+            background: #f1c40f;
+            color: #000;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+        }
+
+        .career-th.sortable:hover {
+            background: #e2b607;
+        }
+
+        .career-th .sort-icons {
+            position: absolute;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            top: 5px;
+        }
+
+        .sort-icon {
+            font-size: 12px;
+            width: 12px;
+        }
+
+        .career-tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .career-search-container {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .career-search-input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .career-button {
+            padding: 8px 12px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .career-button:hover {
+            background: #555;
+        }
+
+        .career-search-btn {
+            display: inline-block;
+        }
+
+        .career-pdf-icon {
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <div class="container text-center mt-4">
-        <div class="row justify-content-center">
-            <div class="col-4 box">Director General, CSIR</div>
+
+    <div class="career-container">
+        <h2 class="career-title">Careers</h2>
+        
+        <div class="career-search-container">
+            <input type="text" class="career-search-input" id="searchInput" placeholder="Search for Career..."
+                oninput="toggleClearButton()">
+            <button class="career-button career-search-btn" onclick="searchTable()">Search</button>
+            <button class="career-button" id="clearBtn" onclick="clearSearch()">Clear</button>
         </div>
-        <div class="connector"></div>
-        <div class="row justify-content-center">
-            <div class="col-4 box bg-danger">Director, CSIR-NAL</div>
-        </div>
-        <div class="connector"></div>
-        <div class="row justify-content-center horizontal-line">
-            <div class="col-md-4 box bg-primary">Research Council</div>
-            <div class="col-md-4 box bg-primary">Management Council</div>
-        </div>
-        <div class="connector"></div>
-        <div class="row justify-content-center horizontal-line">
-            <div class="col-md-3 box bg-info">Aerothermal Sciences Cluster</div>
-            <div class="col-md-3 box bg-info">Materials Science & Technology Cluster</div>
-            <div class="col-md-3 box bg-info">Structural Technology Cluster</div>
-            <div class="col-md-3 box bg-info">Systems Engineering Cluster</div>
-        </div>
-        <div class="connector"></div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 box bg-success">Civil Aircraft Design & Certification Cluster</div>
-            <div class="col-md-6 box bg-warning">Management, Administration & Support</div>
-        </div>
+
+        <table class="career-table" id="careersTable">
+            <thead>
+                <tr class="career-tr">
+                    <th class="career-th sortable" onclick="sortTable(0)">
+                        Sl No.
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-0">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-0">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="career-th sortable" onclick="sortTable(1)">
+                        Title
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-1">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-1">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="career-th sortable" onclick="sortTable(2)">
+                        Last Date
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-2">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-2">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="career-th sortable" onclick="sortTable(3)">
+                        Category
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-3">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-3">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="career-th">Document</th>
+                    <th class="career-th sortable" onclick="sortTable(5)">
+                        Status
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-5">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-5">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="career-th sortable" onclick="sortTable(6)">
+                        Publish Date
+                        <div class="sort-icons">
+                            <div class="sort-icon" id="sort-up-6">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .clss-1,
+                                            .clss-2 {
+                                                fill: none;
+                                                stroke: #fff;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .clss-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .clss-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>up</title>
+                                    <circle class="clss-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="clss-2" points="75.05 61.03 46.48 32.46 18.44 60.5" />
+                                </svg>
+                            </div>
+                            <div class="sort-icon" id="sort-down-6">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 93.49 93.49">
+                                    <defs>
+                                        <style>
+                                            .cls-1,
+                                            .cls-2 {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-width: 4px;
+                                            }
+
+                                            .cls-1 {
+                                                stroke-miterlimit: 10;
+                                            }
+
+                                            .cls-2 {
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Untitled-1</title>
+                                    <circle class="cls-1" cx="46.75" cy="46.75" r="44.75" />
+                                    <polyline class="cls-2" points="18.44 32.46 47.02 61.03 75.05 33" />
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="career-tr">
+                    <td class="career-td">1</td>
+                    <td class="career-td">Software Developer</td>
+                    <td class="career-td">2025-04-10</td>
+                    <td class="career-td">IT</td>
+                    <td class="career-td career-pdf-icon"><a href="#"><img src="pdf-icon.png" width="20"></a></td>
+                    <td class="career-td">Open</td>
+                    <td class="career-td">2025-03-05</td>
+                </tr>
+                <tr class="career-tr">
+                    <td class="career-td">1</td>
+                    <td class="career-td">SofsaSAsastware Developer</td>
+                    <td class="career-td">2025-04-10</td>
+                    <td class="career-td">IT</td>
+                    <td class="career-td career-pdf-icon"><a href="#"><img src="pdf-icon.png" width="20"></a></td>
+                    <td class="career-td">Open</td>
+                    <td class="career-td">2025-03-05</td>
+                </tr>
+                <tr class="career-tr">
+                    <td class="career-td">1</td>
+                    <td class="career-td">Softwasasaare Developer</td>
+                    <td class="career-td">2034-04-10</td>
+                    <td class="career-td">IT</td>
+                    <td class="career-td career-pdf-icon"><a href="#"><img src="pdf-icon.png" width="20"></a></td>
+                    <td class="career-td">Open</td>
+                    <td class="career-td">2025-03-05</td>
+                </tr>
+                <tr class="career-tr">
+                    <td class="career-td">1</td>
+                    <td class="career-td">Softwarasasae Developer</td>
+                    <td class="career-td">2025-04-10</td>
+                    <td class="career-td">IT</td>
+                    <td class="career-td career-pdf-icon"><a href="#"><img src="pdf-icon.png" width="20"></a></td>
+                    <td class="career-td">Open</td>
+                    <td class="career-td">2025-03-05</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <script>
+        let currentSortColumn = -1;
+        let ascending = true;
+
+        function searchTable() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let table = document.getElementById("careersTable");
+            let rows = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < rows.length; i++) {
+                let rowText = rows[i].textContent.toLowerCase();
+                rows[i].style.display = rowText.includes(input) ? "" : "none";
+            }
+
+            toggleClearButton();
+        }
+
+        function clearSearch() {
+            document.getElementById("searchInput").value = "";
+            searchTable();
+            document.getElementById("clearBtn").style.display = "none";
+        }
+
+        function toggleClearButton() {
+            let input = document.getElementById("searchInput").value;
+            let clearBtn = document.getElementById("clearBtn");
+            clearBtn.style.display = input.length > 0 ? "inline-block" : "none";
+        }
+
+        function sortTable(colIndex) {
+            let table = document.getElementById("careersTable");
+            let rows = Array.from(table.rows).slice(1);
+
+            if (currentSortColumn === colIndex) {
+                ascending = !ascending;
+            } else {
+                ascending = true;
+                currentSortColumn = colIndex;
+            }
+
+            rows.sort((rowA, rowB) => {
+                let cellA = rowA.cells[colIndex].textContent.trim();
+                let cellB = rowB.cells[colIndex].textContent.trim();
+                return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+            });
+
+            rows.forEach(row => table.appendChild(row));
+
+            updateSortIcons(colIndex);
+        }
+
+        function updateSortIcons(colIndex) {
+            document.querySelectorAll(".sort-icon").forEach(icon => icon.classList.remove("active"));
+            document.getElementById(ascending ? `sort-up-${colIndex}` : `sort-down-${colIndex}`).classList.add("active");
+        }
+    </script>
+
 </body>
+
 </html>

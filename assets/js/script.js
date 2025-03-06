@@ -305,6 +305,7 @@ function googleTranslateElementInit() {
       select.options[0].textContent = "English"; // Change first option text
       observer.disconnect(); // Stop observing once it's done
     }
+    
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
