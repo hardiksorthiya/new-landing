@@ -3,150 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tenders</title>
+    <title>News Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        .table-responsive {
-            margin-top: 20px;
+        .news-card {
+            display: none;
         }
-        .nav-tabs .nav-link {
-            background: #f1c40f;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .nav-tabs .nav-link.active {
-            background: #e2b607;
-            color: black;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: #f1c40f;
-            border-color: #f1c40f;
+        .news-card:nth-child(-n+4) {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="container mt-4">
-        <ul class="nav nav-tabs" id="tenderTabs">
-            <li class="nav-item"><a class="nav-link active" data-filter="all">All Tenders</a></li>
-            <li class="nav-item"><a class="nav-link" data-filter="3days">Closing within 3 Days</a></li>
-            <li class="nav-item"><a class="nav-link" data-filter="week">Closing within a Week</a></li>
-            <li class="nav-item"><a class="nav-link" data-filter="category">Category Wise</a></li>
-        </ul>
-
-        <div class="d-flex justify-content-between mt-3">
-            <div>Show 
-                <select id="entriesSelect" class="form-select d-inline-block w-auto">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="20">20</option>
-                </select> 
-                entries
+        <!-- Filter Section -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Businesses</option>
+                </select>
             </div>
-            <div class="d-flex">
-                <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-                <button class="btn btn-danger ms-2" id="clearSearch">Clear</button>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Topics</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Types</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Dates</option>
+                </select>
             </div>
         </div>
-
-        <div class="table-responsive">
-            <table class="table table-bordered" id="tenderTable">
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Tender ID</th>
-                        <th>Tender No.</th>
-                        <th>Name of Work</th>
-                        <th>Category</th>
-                        <th>Issue From</th>
-                        <th>Issue To</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data will be inserted dynamically -->
-                </tbody>
-            </table>
+        
+        <!-- News Section -->
+        <div class="row" id="news-container">
+            <div class="col-md-3 news-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <p class="card-text">News content here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 news-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <p class="card-text">News content here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 news-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <p class="card-text">News content here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 news-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <p class="card-text">News content here</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="d-flex justify-content-between">
-            <div>Showing <span id="showingCount"></span> of <span id="totalCount"></span> entries</div>
-            <ul class="pagination" id="pagination"></ul>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-3">
+            <button class="btn btn-warning" id="load-more">Load More</button>
         </div>
     </div>
     
     <script>
-        let allData = [
-            [1, "2025 0010", "NAL/DTS/11", "Supply of CNC Router", "Supply", "08 Mar 2025", "10 Mar 2025", '<button class="btn btn-sm btn-primary">PDF</button>'],
-            [2, "2025 0011", "NAL/DTS/12", "Construction of Road", "Construction", "10 Mar 2025", "13 Mar 2025", '<button class="btn btn-sm btn-primary">PDF</button>'],
-            [3, "2025 0012", "NAL/DTS/13", "Electrical Wiring", "Electrical", "12 Mar 2025", "15 Mar 2025", '<button class="btn btn-sm btn-primary">PDF</button>'],
-            [4, "2025 0013", "NAL/DTS/14", "Office Furniture", "Supply", "14 Mar 2025", "18 Mar 2025", '<button class="btn btn-sm btn-primary">PDF</button>'],
-        ];
-
-        let currentPage = 1, rowsPerPage = 10;
-        let filteredData = allData;
-        let currentFilter = "all";
-
-        function filterData() {
-            let today = new Date("2025-03-09");
-
-            if (currentFilter === "3days") {
-                filteredData = allData.filter(row => {
-                    let closeDate = new Date(row[6]);
-                    return (closeDate - today) / (1000 * 60 * 60 * 24) <= 3;
-                });
-            } else if (currentFilter === "week") {
-                filteredData = allData.filter(row => {
-                    let closeDate = new Date(row[6]);
-                    return (closeDate - today) / (1000 * 60 * 60 * 24) <= 7;
-                });
-            } else if (currentFilter === "category") {
-                filteredData = allData.filter(row => row[4] === "Supply");  // Change category filter logic here
-            } else {
-                filteredData = allData;
-            }
-
-            currentPage = 1;
-            displayTable();
-        }
-
-        function displayTable() {
-            let start = (currentPage - 1) * rowsPerPage;
-            let end = start + rowsPerPage;
-            let rows = filteredData.slice(start, end).map(row => `<tr>${row.map(col => `<td>${col}</td>`).join('')}</tr>`).join('');
-            document.querySelector("#tenderTable tbody").innerHTML = rows;
-            document.getElementById("showingCount").textContent = Math.min(end, filteredData.length);
-            document.getElementById("totalCount").textContent = filteredData.length;
-            setupPagination();
-        }
-
-        function setupPagination() {
-            let pages = Math.ceil(filteredData.length / rowsPerPage);
-            let paginationHTML = `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}"><a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Previous</a></li>`;
-            for (let i = 1; i <= pages; i++) {
-                paginationHTML += `<li class="page-item ${i === currentPage ? 'active' : ''}"><a class="page-link" href="#" onclick="changePage(${i})">${i}</a></li>`;
-            }
-            paginationHTML += `<li class="page-item ${currentPage === pages ? 'disabled' : ''}"><a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a></li>`;
-            document.getElementById("pagination").innerHTML = paginationHTML;
-        }
-
-        function changePage(page) {
-            if (page < 1 || page > Math.ceil(filteredData.length / rowsPerPage)) return;
-            currentPage = page;
-            displayTable();
-        }
-
-        document.querySelectorAll(".nav-tabs .nav-link").forEach(tab => {
-            tab.addEventListener("click", function () {
-                document.querySelectorAll(".nav-tabs .nav-link").forEach(t => t.classList.remove("active"));
-                this.classList.add("active");
-                currentFilter = this.getAttribute("data-filter");
-                filterData();
+        $(document).ready(function() {
+            $("#load-more").click(function() {
+                $(".news-card:hidden").slice(0, 4).slideDown();
+                if ($(".news-card:hidden").length == 0) {
+                    $(this).fadeOut();
+                }
             });
         });
-
-        displayTable();
     </script>
 </body>
 </html>
