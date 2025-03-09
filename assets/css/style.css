@@ -1352,3 +1352,19 @@ span.blur-bg-search:after {
 .career-pdf-icon {
   text-align: center;
 }
+
+.career-pdf-icon img{
+  width: 20px;
+}
+/* tender */
+ul#tenderTabs a.nav-link {
+  border-radius: 0;
+  border: none;
+  background: #f4c708;
+  color: black;
+}
+ul#tenderTabs {
+  gap: 10px;
+  border: none;
+  margin-bottom: 30px;
+}
