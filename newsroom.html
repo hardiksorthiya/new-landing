@@ -151,51 +151,81 @@
             </div>
         </div>
         <div class="container mt-4">
-            <ul class="nav nav-tabs" id="tenderTabs">
-                <li class="nav-item"><a class="nav-link active" data-filter="all">All Tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="3days">Closing within 3 Days</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="week">Closing within a Week</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="category">Category wise all tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="other">Other Information</a></li>
-            </ul>
-            <div class="d-flex justify-content-between my-3">
-                <div>Show 
-                    <select id="entriesSelect" class="form-select d-inline-block w-auto">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                    </select> 
-                    entries
+            <!-- Filter Section -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option selected>All Businesses</option>
+                    </select>
                 </div>
-                <div class="d-flex">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-                    <button class="btn btn-danger ms-2" id="clearSearch">Clear</button>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option selected>All Topics</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option selected>All Types</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option selected>All Dates</option>
+                    </select>
                 </div>
             </div>
-            <div class="table-responsive">
-                <table class="table table-bordered" id="tenderTable">
-                    <thead>
-                        <tr>
-                            <th onclick="sortTable(0)">S.No</th>
-                            <th onclick="sortTable(1)">Tender ID</th>
-                            <th onclick="sortTable(2)">Tender No.</th>
-                            <th onclick="sortTable(3)">Name of Work</th>
-                            <th onclick="sortTable(4)">Category</th>
-                            <th onclick="sortTable(5)">Issue From</th>
-                            <th onclick="sortTable(6)">Issue To</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Data will be inserted dynamically -->
-                    </tbody>
-                </table>
+            
+            <!-- News Section -->
+            <div class="row" id="news-container">
+                <div class="col-md-3 news-card">
+                    <div class="card">
+                        <img src="assets/images/news.png" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <p class="card-text">News content here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 news-card">
+                    <div class="card">
+                        <img src="assets/images/news.png" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <p class="card-text">News content here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 news-card">
+                    <div class="card">
+                        <img src="assets/images/news.png" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <p class="card-text">News content here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 news-card">
+                    <div class="card">
+                        <img src="assets/images/news.png" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <p class="card-text">News content here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 news-card">
+                    <div class="card">
+                        <img src="assets/images/news.png" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <p class="card-text">News content here</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex justify-content-between">
-                <div>Showing <span id="showingCount"></span> of <span id="totalCount"></span> entries</div>
-                <ul class="pagination" id="pagination"></ul>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-3">
+                <button class="btn btn-warning" id="load-more">Load More</button>
             </div>
         </div>
+        
+       
     </section>
     <!-- footer -->
     <footer class="csir-footer overflow-hidden" style="background-color: #00002e" data-aos="fade-up"
@@ -319,7 +349,16 @@
 
 
     <!-- script for data -->
-
+    <script>
+        $(document).ready(function() {
+            $("#load-more").click(function() {
+                $(".news-card:hidden").slice(0, 4).slideDown();
+                if ($(".news-card:hidden").length == 0) {
+                    $(this).fadeOut();
+                }
+            });
+        });
+    </script>
 
 
     <!-- fotter slider -->
