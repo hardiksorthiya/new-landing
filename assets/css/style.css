@@ -431,10 +431,17 @@ button#nextSlide:hover path.clsa-1 {
   border-radius: 0 !important;
   box-shadow: 2px 2px 10px #8080806e;
   margin: 10px 0; 
-  transform: scale(0.9) !important;
+  /* transform: scale(0.9) !important; */
 }
-.csir-hp-card:hover {
+/* .csir-hp-card:hover {
   transform: scale(1) !important;
+} */
+section.section-topics-csir-nal .row .col-md-6:hover {
+  transform: scale(1);
+}
+section.section-topics-csir-nal .row .col-md-6 {
+  transform: scale(0.9);
+  transition: 1s !important;
 }
 
 .card-title-csir-hp {
@@ -827,14 +834,12 @@ div#goog-gt- {
 }
 
 #google_translate_element select {
-  background: var(--yellow-color-csir);
+ 
   color: #000000;
   border: none;
-  font-weight: bold;
-  border-radius: 3px;
-  padding: 8px 12px;
+  font-family: 'csir-nal-chivo';
+  font-size: 16px;
 }
-
 .top-up-home.d-flex {
   gap: 10px;
 }

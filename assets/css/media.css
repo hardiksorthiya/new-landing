@@ -151,5 +151,9 @@ a#searchToggle {
  .slider-container {
   height: 90vh;
 }
-
+ }
+ @media (min-width:1025px) {
+ .mandate-csir-section, .about-csir-section {
+  height: 100vh;
+}
  }
