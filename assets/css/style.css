@@ -1373,3 +1373,20 @@ ul#tenderTabs {
   border: none;
   margin-bottom: 30px;
 }
+/* newsroom */
+.hp-selct-form-newsroom.form-select:focus {
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: none !important;
+  background-color: #ffc107 !important;
+  border-radius: 0 !important;
+  padding: 10px !important;
+}
+.hp-selct-form-newsroom.form-select {
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: none !important;
+  background-color: #ffc107 !important;
+  border-radius: 0 !important;
+  padding: 10px !important;
+}
