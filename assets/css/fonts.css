@@ -36,7 +36,7 @@
   }
   @font-face {
     font-family: 'csir-nal-chivo';
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     src: url(../webfonts/Chivo-Medium.ttf);
   }
@@ -48,7 +48,7 @@
   }
   @font-face {
     font-family: 'csir-nal-chivo';
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     src: url(../webfonts/Chivo-Regular.ttf);
   }
