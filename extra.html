@@ -12,15 +12,20 @@
             margin: 50px;
         }
 
+        /* Custom Dropdown */
         .custom-dropdown {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            padding: 10px 15px;
+            padding: 10px;
             background: #007bff;
-            color: white;
             border-radius: 5px;
-            font-size: 16px;
+        }
+
+        .custom-dropdown img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
         }
 
         .dropdown-content {
@@ -38,6 +43,14 @@
             padding: 10px;
             cursor: pointer;
             transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dropdown-content div img {
+            width: 20px;
+            height: 20px;
         }
 
         .dropdown-content div:hover {
@@ -49,7 +62,7 @@
             display: block;
         }
 
-        /* Sample content */
+        /* Sample Content */
         .content {
             margin-top: 20px;
             font-size: 18px;
@@ -77,61 +90,49 @@
 </head>
 <body>
 
-    <!-- Google Translate Placeholder (Hidden) -->
+    <!-- Google Translate Hidden -->
     <div id="google_translate_element"></div>
 
-    <!-- Custom Language Dropdown -->
-    <div class="custom-dropdown" id="language-selector">
-        English <!-- Default Selected Language -->
+    <!-- Custom Language Dropdown (Static Icon) -->
+    <div class="custom-dropdown">
+        <img src="https://cdn-icons-png.flaticon.com/512/5614/5614109.png" alt="Language"> <!-- Default Language Icon -->
         <div class="dropdown-content">
-            <div onclick="changeLanguage('en', 'English')">English</div>
-            <div onclick="changeLanguage('hi', 'हिन्दी')">हिन्दी</div>
-            <div onclick="changeLanguage('kn', 'ಕನ್ನಡ')">ಕನ್ನಡ</div>
+            <div onclick="changeLanguage('en')">
+                English
+            </div>
+            <div onclick="changeLanguage('hi')">
+                हिन्दी
+            </div>
+            <div onclick="changeLanguage('kn')">
+                ಕನ್ನಡ
+            </div>
         </div>
     </div>
 
-    <!-- Sample Content to Test Translation -->
-    <div class="content">
-        <h2>Welcome to Our Website</h2>
-        <p>This is a demonstration of Google Translate integration with a custom language selector. Click on a language above to see the translation in action!</p>
-        
-        <h3>About Us</h3>
-        <p>We are dedicated to providing the best solutions for our users. Our goal is to break language barriers and enhance communication globally.</p>
-
-        <h3>Our Services</h3>
-        <ul>
-            <li>Web Development</li>
-            <li>Mobile App Development</li>
-            <li>SEO Optimization</li>
-            <li>UI/UX Design</li>
-        </ul>
-    </div>
+   A
 
     <script>
         // Initialize Google Translate
         function googleTranslateInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en', // Default language
-                includedLanguages: 'en,hi,kn', // Only English, Hindi, Kannada
+                includedLanguages: 'en,hi,kn', // English, Hindi, Kannada
                 autoDisplay: false
             }, 'google_translate_element');
         }
 
-        // Function to change language and update dropdown text
-        function changeLanguage(lang, languageText) {
+        // Function to Change Language
+        function changeLanguage(lang) {
             var selectField = document.querySelector("select.goog-te-combo");
             if (selectField) {
                 selectField.value = lang;
                 selectField.dispatchEvent(new Event('change'));
 
-                // Use a slight delay to ensure translation applies properly
+                // Ensure translation applies properly
                 setTimeout(() => {
                     selectField.dispatchEvent(new Event('change'));
                 }, 500);
             }
-
-            // Update selected language text
-            document.getElementById("language-selector").childNodes[0].nodeValue = languageText + " ";
         }
     </script>
 

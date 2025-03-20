@@ -290,26 +290,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // translate
+  // Initialize Google Translate
+  function googleTranslateInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en', // Default language
+        includedLanguages: 'en,hi,kn', // English, Hindi, Kannada
+        autoDisplay: false
+    }, 'google_translate_element');
+}
 
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-  pageLanguage: 'en',
-  autoDisplay: 'true',
-  includedLanguages:'en,hi,kn', 
-  layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-  }, 'google_translate_element');
+// Function to Change Language
+function changeLanguage(lang) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+        selectField.value = lang;
+        selectField.dispatchEvent(new Event('change'));
 
-  const observer = new MutationObserver(() => {
-    let select = document.querySelector("#google_translate_element select");
-    if (select) {
-      select.options[0].textContent = "English"; // Change first option text
-      observer.disconnect(); // Stop observing once it's done
+        // Ensure translation applies properly
+        setTimeout(() => {
+            selectField.dispatchEvent(new Event('change'));
+        }, 500);
     }
-    
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-  
 }
 // animation
 

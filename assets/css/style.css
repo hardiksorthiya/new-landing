@@ -205,6 +205,68 @@ span#menuToggle {
   font-size: 20px;
   cursor: pointer;
 }
+ /* Custom Dropdown */
+ .custom-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.custom-dropdown img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 150px;
+  text-align: left;
+}
+
+.dropdown-content div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-content div img {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-content div:hover {
+  background: var(--yellow-color-csir);
+  color: white;
+}
+
+.custom-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hide Google Translate Top Bar */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Hide Google Translate Default Toolbar */
+.goog-te-gadget {
+  display: none !important;
+}
+
+/* Fix layout shift */
+body > .skiptranslate {
+  display: none !important;
+}
 
 /* Sidebar Styling */
 .sidebar {

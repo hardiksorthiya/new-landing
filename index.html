@@ -75,10 +75,11 @@
                         <li><a href="services.html" class="text-decoration-none">Services</a></li>
                         <li><a href="outreach.html" class="text-decoration-none">Outreach</a></li>
                     </ul>
-                    <a href="#" id="searchToggle" class="text-decoration-none px-3 text-black d-flex align-items-center">Search
+                    <a href="#" id="searchToggle"
+                        class="text-decoration-none px-3 text-black d-flex align-items-center">Search
                         <span class="position-relative">
                             <span class="blur-bg-search"></span>
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 13.51 13.5" style="width: 20px">
                                 <title>web</title>
                                 <path
@@ -87,7 +88,25 @@
                             </svg>
                         </span>
                     </a>
-                    <div id='google_translate_element' class="overflow-hidden"></div>
+                    <!-- Google Translate Hidden -->
+                    <div id="google_translate_element"></div>
+
+                    <!-- Custom Language Dropdown (Static Icon) -->
+                    <div class="custom-dropdown">
+                        <img src="assets/images/languages.png" alt="Language">
+                        <!-- Default Language Icon -->
+                        <div class="dropdown-content">
+                            <div onclick="changeLanguage('en')">
+                                English
+                            </div>
+                            <div onclick="changeLanguage('hi')">
+                                हिन्दी
+                            </div>
+                            <div onclick="changeLanguage('kn')">
+                                ಕನ್ನಡ
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -114,22 +133,27 @@
                 </span>
             </div>
             <div class="sidebar-links">
-                <a href="about_us.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
-                  <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61"/>
-                </svg>About us</a>
-                <a href="organisation_chart.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
-                  <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61"/>
-                </svg>Organisation Chart</a>
-                <a href="history.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
-                  <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61"/>
-                </svg>History of NAL</a>
-                <a href="leaders.html"> <svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
-                  <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61"/>
-                </svg>Our leaders</a>
-                <a href="mandate.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
-                  <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61"/>
-                </svg>Our Mandate</a>
-              </div>
+                <a href="about_us.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>About us</a>
+                <a href="organisation_chart.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Organisation Chart</a>
+                <a href="history.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>History of NAL</a>
+                <a href="leaders.html"> <svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Our leaders</a>
+                <a href="mandate.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Our Mandate</a>
+            </div>
         </div>
     </section>
     <!-- slider hero -->
@@ -548,15 +572,15 @@
                     <div class="row g-3">
                         <div class="col-12 overflow-hidden" style="border-radius: 5px;">
                             <img src="assets/images/news/1.png" class="img-fluid rounded shadow image-open-gallery"
-                                alt="Announcement Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1"/>
+                                alt="Announcement Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1" />
                         </div>
                         <div class="col-12 overflow-hidden" style="border-radius: 5px;">
                             <img src="assets/images/news/2.png" class="img-fluid rounded shadow image-open-gallery"
-                                alt="Announcement Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2"/>
+                                alt="Announcement Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2" />
                         </div>
                         <div class="col-12 overflow-hidden" style="border-radius: 5px;">
                             <img src="assets/images/news/3.png" class="img-fluid rounded shadow image-open-gallery"
-                                alt="Announcement Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3"/>
+                                alt="Announcement Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3" />
                         </div>
                     </div>
                 </div>
@@ -578,7 +602,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -586,7 +610,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -594,7 +618,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -602,7 +626,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -610,7 +634,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -638,7 +662,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -646,7 +670,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -654,7 +678,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -662,7 +686,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -670,7 +694,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -698,7 +722,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -706,7 +730,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -714,7 +738,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -722,7 +746,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -730,7 +754,7 @@
                                 <div class="card-gallery">
                                     <a href="#">
                                         <img src="assets/images/news/1.png" class="img-fluid">
-                                    <h4>Title</h4>
+                                        <h4>Title</h4>
                                     </a>
                                 </div>
                             </div>
@@ -877,7 +901,8 @@
         </div>
     </section>
     <!-- footer -->
-    <footer class="csir-footer overflow-hidden" style="background-color: #00002e" data-aos="fade-up" data-aos-duration="300">
+    <footer class="csir-footer overflow-hidden" style="background-color: #00002e" data-aos="fade-up"
+        data-aos-duration="300">
         <div class="container">
             <div class="row text-white">
                 <div class="col-lg-4">
@@ -963,13 +988,19 @@
                     <div class="custom-slider-container">
                         <div class="swiper-wrapper">
                             <!-- 10 images -->
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png" alt="Image 1"></div>
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/India Gov in.png" alt="Image 2"></div>
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/ITU.png" alt="Image 3"></div>
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/One CSIR.png" alt="Image 4"></div>
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Digital.png" alt="Image 5"></div>
-                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png" alt="Image 1"></div>
-                            
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png"
+                                    alt="Image 1"></div>
+                            <div class="swiper-slide custom-slider-slide"><img
+                                    src="assets/images/footer/India Gov in.png" alt="Image 2"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/ITU.png"
+                                    alt="Image 3"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/One CSIR.png"
+                                    alt="Image 4"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Digital.png"
+                                    alt="Image 5"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png"
+                                    alt="Image 1"></div>
+
                         </div>
                     </div>
                 </div>
@@ -982,13 +1013,15 @@
             </div>
         </div>
     </section>
-    
+
     <!-- script -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/element.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+
 
 </body>
 
