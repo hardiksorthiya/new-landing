@@ -832,7 +832,7 @@ section.footer-bottam-band {
 }
 
 .social-icons a img {
-  width: 70px;
+  width: 36px;
   margin: 20px;
   animation: zoom-in-zoom-out 5s ease-out infinite;
 }
@@ -852,7 +852,7 @@ section.footer-bottam-band {
 }
 
 .qr-code img {
-  width: 140px;
+  width: 70px;
   margin: 10px;
 }
 
@@ -866,6 +866,7 @@ section.footer-bottam-band h5 {
 
 ul.footer-external-links {
   list-style: disc;
+  padding-left: 1rem;
 }
 
 ul.footer-external-links li {
@@ -874,11 +875,12 @@ ul.footer-external-links li {
 
 h4.footer-title-logo {
   color: var(--white-color-csir-nal);
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 p.add-ftr-detail {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   margin-bottom: 0;
 }
