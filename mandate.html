@@ -87,7 +87,25 @@
                       </svg>
                   </span>
               </a>
-              <div id='google_translate_element' class="overflow-hidden"></div>
+              <!-- Google Translate Hidden -->
+              <div id="google_translate_element"></div>
+
+              <!-- Custom Language Dropdown (Static Icon) -->
+              <div class="custom-dropdown">
+                  <img src="assets/images/languages.png" alt="Language">
+                  <!-- Default Language Icon -->
+                  <div class="dropdown-content">
+                      <div onclick="changeLanguage('en')">
+                          English
+                      </div>
+                      <div onclick="changeLanguage('hi')">
+                          हिन्दी
+                      </div>
+                      <div onclick="changeLanguage('kn')">
+                          ಕನ್ನಡ
+                      </div>
+                  </div>
+              </div>
           </nav>
       </div>
   </header>
@@ -346,6 +364,7 @@
   <script src="assets/js/script.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/element.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
 </body>
 
 </html>
