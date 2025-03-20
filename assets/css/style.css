@@ -857,11 +857,12 @@ section.footer-bottam-band {
 }
 
 section.footer-bottam-band h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .footer-title-csir {
   font-size: 28px;
+  margin-bottom: 30px;
 }
 
 ul.footer-external-links {
@@ -876,18 +877,18 @@ ul.footer-external-links li {
 h4.footer-title-logo {
   color: var(--white-color-csir-nal);
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p.add-ftr-detail {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
 ul.footer-external-links li a {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 p.scnner-text {
