@@ -90,7 +90,9 @@ body {
   z-index: 1040;
   transition: transform 0.3s ease-in-out;
 }
-
+a.text-decoration-none.active {
+  background: var(--yellow-color-csir);
+}
 .custom-header.hidden {
   transform: translateY(-100%);
 }
@@ -1467,16 +1469,30 @@ span.blur-bg-search:after {
   width: 20px;
 }
 /* tender */
+.hidden {
+  display: none;
+}
+table#tenderTable th {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+img.career-pdf-icon-img {
+  width: 30px;
+}
 ul#tenderTabs a.nav-link {
   border-radius: 0;
   border: none;
   background: #f4c708;
   color: black;
+  padding: 15px 30px;
 }
 ul#tenderTabs {
   gap: 10px;
   border: none;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 /* newsroom */
 .hp-selct-form-newsroom.form-select:focus {
