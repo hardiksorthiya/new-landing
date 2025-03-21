@@ -4,7 +4,13 @@
      left: -100%;
      width: 250px;
    }
-
+   .banner-text-hp {
+    bottom: 14%;
+  }
+  span#menuToggle {
+    position: relative;
+    left: 0;
+}
    .sidebar.open {
      left: 0;
    }
@@ -106,6 +112,10 @@ a#searchToggle {
 .image-for-mandate {
   left: 9%;
   top: 29px;
+}
+.banner-text-hp {
+  font-size: 20px;
+  bottom: 14%;
 }
  }
 
