@@ -181,69 +181,87 @@
         </div>
     </div>
     </section>
-    <!-- main section -->
-    <section class="tender-csir-section mt-120 overflow-hidden position-relative mb-100">
+    
+    <!-- main -->
+    <section class="applan-csir-section mt-120 overflow-hidden position-relative mb-3">
         <div class="container">
             <div class="row">
-                
                 <div class="col-12  position-relative" data-aos="fade-up-right" data-aos-delay="500"
                     data-aos-duration="700">
-                    <h2 class="page-title-heading-hp-csir">Tenders- Purchase/Works/General Tenders/Other NITs</h2>
+                    <h2 class="page-title-heading-hp-csir">Annual Procurement Plan</h2>
                 </div>
-            </div>
-        </div>
-        <div class="container mt-4">
-            <ul class="nav nav-tabs" id="tenderTabs">
-                <li class="nav-item"><a class="nav-link active" data-filter="purchase">Purchase Tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="works">Works Tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="general">General Tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="otherlab">Other Lab Tenders</a></li>
-                <li class="nav-item"><a class="nav-link" data-filter="archive">Tender Archives</a></li>
-                <li class="nav-item"><a href="annual_procurement_plan.html" class="nav-link" >Annual Procurement Plan</a></li>
-            </ul>
-            <div class="d-flex justify-content-between my-3">
-                <div>
-                    Show
-                    <select id="entriesSelect" class="form-control d-inline-block w-auto">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                    </select>
-                    entries
-                </div>
-                <div class="d-flex">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-                    <button class="btn btn-danger ml-2" id="clearSearch">Clear</button>
-                </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped" id="tenderTable">
-                    <thead>
-                        <tr>
-                            <th onclick="sortTable(0)">File No</th>
-                            <th onclick="sortTable(1)">Item Description</th>
-                            <th onclick="sortTable(2)">Pre-Bid Conference</th>
-                            <th onclick="sortTable(3)">Date of Submission of Bid</th>
-                            <th onclick="sortTable(4)">Date of Opening the Bid</th>
-                            <th onclick="sortTable(5)">Tender Details</th>
-                            <th onclick="sortTable(6)">Corrigendum</th>
-                            <th onclick="sortTable(7)">Tender Closing Details</th>
-                            <th class="hidden">Tender tab category</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                        <!-- Rows inserted dynamically -->
-                    </tbody>
-                </table>
-            </div>
-        
-            <!-- Pagination and Showing Count -->
-            <div class="d-flex justify-content-between">
-                <div>Showing <span id="showingCount"></span> of <span id="totalCount"></span> entries</div>
-                <ul class="pagination" id="pagination"></ul>
             </div>
         </div>
     </section>
+    <section class="applan-csir-section overflow-hidden position-relative mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="aprpla-box">
+                        <div class="year-header">2024-25</div>
+                        <div class="d-flex">
+                            <div class="col-6 section">
+                                <p>Capital</p>
+                                <a href="#">
+                                <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                </a>
+                            </div>
+                            <div class="col-6 section">
+                                <p>Consumable</p>
+                                <a href="#">
+                                    <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                    </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="aprpla-box">
+                        <div class="year-header">2025-26</div>
+                        <div class="d-flex">
+                            <div class="col-6 section">
+                                <p>Capital</p>
+                                <a href="#">
+                                <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                </a>
+                            </div>
+                            <div class="col-6 section">
+                                <p>Consumable</p>
+                                <a href="#">
+                                    <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                    </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="aprpla-box">
+                        <div class="year-header">2026-27</div>
+                        <div class="d-flex">
+                            <div class="col-6 section">
+                                <p>Capital</p>
+                                <a href="#">
+                                <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                </a>
+                            </div>
+                            <div class="col-6 section">
+                                <p>Consumable</p>
+                                <a href="#">
+                                    <img src="assets/images/file.svg" alt="File" class="file-icon">
+                                    </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- footer -->
     <footer class="csir-footer overflow-hidden" style="background-color: #00002e" data-aos="fade-up"
         data-aos-duration="300">
@@ -364,202 +382,6 @@
             </div>
         </div>
     </section>
-
-    <!-- script for data -->
-
-  
-<script>
-    // Tender Data for Each Tab
-    const tenderData = {
-        purchase: {
-            rows: [
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""],
-                ["NAL/PUR/MSD/653/19-Y", "", "", "", "", "<a href='#'><img class=\"career-pdf-icon-img\" src=\"assets/images/file.svg\"></a>", "", ""]
-            ]
-        },
-        works: {
-            rows: [
-                ["W001", "Construction of Building", "2025-03-01", "2025-03-10", "2025-06-30", "<a href='#'>View Details</a>", "N/A", "2025-07-01", "works"],
-                ["W002", "Renovation of Lab", "2025-03-05", "2025-03-15", "2025-05-20", "<a href='#'>View Details</a>", "N/A", "2025-06-01", "works"]
-            ]
-        },
-        general: {
-            rows: [
-                ["G001", "General Service Contract", "2025-04-01", "2025-04-10", "2025-04-20", "<a href='#'>View Details</a>", "N/A", "2025-04-25", "general"],
-                ["G002", "Annual Maintenance Contract", "2025-04-15", "2025-04-20", "2025-05-01", "<a href='#'>View Details</a>", "N/A", "2025-05-05", "general"]
-            ]
-        },
-        otherlab: {
-            rows: [
-                ["O001", "Lab A - Special Purchase", "2025-05-01", "2025-05-05", "2025-05-10", "<a href='#'>View Details</a>", "N/A", "2025-05-15", "otherlab"],
-                ["O002", "Lab B - Maintenance Work", "2025-06-01", "2025-06-10", "2025-06-20", "<a href='#'>View Details</a>", "N/A", "2025-06-25", "otherlab"]
-            ]
-        },
-        archive: {
-            rows: [
-                ["A001", "Archived Tender 2024", "2024-12-01", "2024-12-05", "2024-12-10", "<a href='#'>Download</a>", "N/A", "Closed", "archive"],
-                ["A002", "Old Annual Plan 2024", "2024-11-01", "2024-11-10", "2024-11-20", "<a href='#'>Download</a>", "N/A", "Closed", "archive"]
-            ]
-        },
-        annual: {
-            rows: [
-                ["AN001", "Procurement Plan 2025", "2025-01-15", "2025-01-20", "2025-01-30", "<a href='#'>Download</a>", "N/A", "Closed", "annual"],
-                ["AN002", "Procurement Plan 2024", "2024-01-10", "2024-01-15", "2024-01-25", "<a href='#'>Download</a>", "N/A", "Closed", "annual"]
-            ]
-        }
-    };
-
-    let currentFilter = "purchase"; // Default tab
-    let currentPage = 1;
-    let searchQuery = ""; // Search term
-    const rowsPerPage = document.getElementById("entriesSelect");
-
-    // ✅ Load Initial Table
-    function loadTable(filter) {
-        currentFilter = filter;
-        updateTable();
-    }
-
-    // ✅ Render Table Rows
-    function updateTable() {
-        const tableBody = document.getElementById("tableBody");
-        tableBody.innerHTML = "";
-
-        const rows = tenderData[currentFilter].rows.filter(row =>
-            row.join(" ").toLowerCase().includes(searchQuery)
-        );
-
-        rows.forEach((row, index) => {
-            if (
-                index >= (currentPage - 1) * parseInt(rowsPerPage.value) &&
-                index < currentPage * parseInt(rowsPerPage.value)
-            ) {
-                const tr = document.createElement("tr");
-                row.forEach(cell => {
-                    const td = document.createElement("td");
-                    td.innerHTML = cell;
-                    tr.appendChild(td);
-                });
-                tableBody.appendChild(tr);
-            }
-        });
-
-        updatePagination(rows.length);
-        document.getElementById("showingCount").innerText = Math.min(
-            currentPage * parseInt(rowsPerPage.value),
-            rows.length
-        );
-        document.getElementById("totalCount").innerText = rows.length;
-    }
-
-    // ✅ Updated Pagination Logic
-    function updatePagination(totalRows) {
-        const pagination = document.getElementById("pagination");
-        pagination.innerHTML = "";
-        const totalPages = Math.ceil(totalRows / parseInt(rowsPerPage.value));
-
-        // Previous Button
-        const prevLi = document.createElement("li");
-        prevLi.classList.add("page-item", currentPage === 1 ? "disabled" : "");
-        prevLi.innerHTML = `<a class="page-link">Previous</a>`;
-        prevLi.addEventListener("click", () => {
-            if (currentPage > 1) {
-                currentPage--;
-                updateTable();
-            }
-        });
-        pagination.appendChild(prevLi);
-
-        // Page Numbers (Dynamic)
-        const pageRange = 3; // Show 3 pages before and after the current page
-        let startPage = Math.max(1, currentPage - pageRange);
-        let endPage = Math.min(totalPages, currentPage + pageRange);
-
-        for (let i = startPage; i <= endPage; i++) {
-            const li = document.createElement("li");
-            li.classList.add("page-item", i === currentPage ? "active" : "");
-            li.innerHTML = `<a class="page-link">${i}</a>`;
-            li.addEventListener("click", () => {
-                currentPage = i;
-                updateTable();
-            });
-            pagination.appendChild(li);
-        }
-
-        // Next Button
-        const nextLi = document.createElement("li");
-        nextLi.classList.add("page-item", currentPage === totalPages ? "disabled" : "");
-        nextLi.innerHTML = `<a class="page-link">Next</a>`;
-        nextLi.addEventListener("click", () => {
-            if (currentPage < totalPages) {
-                currentPage++;
-                updateTable();
-            }
-        });
-        pagination.appendChild(nextLi);
-    }
-
-    // ✅ Initial Table Load with Updated Pagination
-    document.addEventListener("DOMContentLoaded", () => {
-        loadTable(currentFilter);
-    });
-
-    // ✅ Sort Function
-    function sortTable(columnIndex) {
-        tenderData[currentFilter].rows.sort((a, b) => {
-            const cellA = a[columnIndex].toLowerCase();
-            const cellB = b[columnIndex].toLowerCase();
-            return cellA.localeCompare(cellB);
-        });
-        updateTable();
-    }
-
-    // ✅ Search Functionality
-    document.getElementById("searchInput").addEventListener("input", function () {
-        searchQuery = this.value.toLowerCase();
-        currentPage = 1;
-        updateTable();
-    });
-
-    // ✅ Clear Search
-    document.getElementById("clearSearch").addEventListener("click", () => {
-        document.getElementById("searchInput").value = "";
-        searchQuery = "";
-        currentPage = 1;
-        updateTable();
-    });
-
-    // ✅ Entries Per Page
-    rowsPerPage.addEventListener("change", () => {
-        currentPage = 1;
-        updateTable();
-    });
-
-    // ✅ Tab Switching
-    document.querySelectorAll("#tenderTabs .nav-link").forEach(tab => {
-        tab.addEventListener("click", function () {
-            document.querySelector("#tenderTabs .nav-link.active").classList.remove("active");
-            this.classList.add("active");
-            loadTable(this.getAttribute("data-filter"));
-        });
-    });
-
-    // ✅ Initial Table Load
-    document.addEventListener("DOMContentLoaded", () => {
-        loadTable(currentFilter);
-    });
-</script>
-
-
-
 
 
     <!-- fotter slider -->

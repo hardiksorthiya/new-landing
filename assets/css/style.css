@@ -299,7 +299,7 @@ body > .skiptranslate {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #00000094;
+  background: hsl(0deg 0% 0% / 59%);
   top: 0;
   left: 0;
 }
@@ -1530,4 +1530,23 @@ ul#tenderTabs {
   background-color: #ffc107 !important;
   border-radius: 0 !important;
   padding: 10px !important;
+}
+/* annual Procurement Plan */
+.year-header {
+  background-color: var(--yellow-color-csir);
+  color: var(--black-color-csir-nal);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
 }
