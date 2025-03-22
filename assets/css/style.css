@@ -1472,10 +1472,30 @@ span.blur-bg-search:after {
 .hidden {
   display: none;
 }
+select#entriesSelect {
+  background: var(--yellow-color-csir);
+}
+button#clearSearch {
+  background: var(--yellow-color-csir);
+  border: none;
+  color: black;
+  margin-left: 10px;
+}
 table#tenderTable th {
   font-weight: 400;
   font-size: 12px;
   text-align: center;
+}
+.disabled>.page-link, .page-link.disabled {
+  color: var(--black-color-csir-nal) !important;
+  pointer-events: none;
+  background-color: var(--yellow-color-csir) !important;
+  border: none !important;
+}
+.active>.page-link, .page-link.active {
+  color: var(--black-color-csir-nal) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 img.career-pdf-icon-img {
   width: 30px;

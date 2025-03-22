@@ -67,6 +67,9 @@
 .about-image img {
   width: 100%;
 }
+.sidebar-links a {
+  margin: 0px 0;
+}
  }
 
 
