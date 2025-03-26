@@ -146,7 +146,10 @@ span#menuToggle {
 }
 /* Search Bar Styling */
 
-
+a#searchToggle {
+  font-weight: 500;
+  font-size: 18px;
+}
 .search-bar {
   width: 100%;
   position: fixed;
@@ -1530,7 +1533,6 @@ img.career-pdf-icon-img {
 .year-header {
   background-color: var(--yellow-color-csir);
   color: var(--black-color-csir-nal);
-  font-weight: bold;
   text-align: center;
   padding: 10px 0;
 }
