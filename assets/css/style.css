@@ -1500,19 +1500,14 @@ table#tenderTable th {
 img.career-pdf-icon-img {
   width: 30px;
 }
-ul#tenderTabs a.nav-link {
-  border-radius: 0;
-  border: none;
+#tenderTabs a.nav-link {
   background: #f4c708;
   color: black;
-  padding: 15px 30px;
+  padding: 10px 0;
+  text-align: center;
 }
-ul#tenderTabs {
-  gap: 10px;
-  border: none;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
+#tenderTabs .col-lg-2 {
+  padding: 2px;
 }
 /* newsroom */
 .hp-selct-form-newsroom.form-select:focus {
