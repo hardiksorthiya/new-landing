@@ -54,8 +54,8 @@ ol {
 .mt-30 {
   margin-top: 30px !important;
 }
-.mt-120 {
-  margin-top: 120px;
+.mt-70 {
+  margin-top: 70px;
 }
 .mb-100 {
 margin-bottom: 100px;
@@ -1550,3 +1550,52 @@ img.career-pdf-icon-img {
   width: 24px;
   height: 24px;
 }
+
+/* facility */
+.custom-slider-container-facility .swiper-slide {
+  background: var(--yellow-color-csir);
+  padding: 0;
+} 
+.custom-slider-container-facility .swiper-pagination {
+  bottom: var(--swiper-pagination-bottom, -60px) !important;
+}
+.custom-slider-container-facility .swiper-button-prev,
+.custom-slider-container-facility .swiper-button-next {
+    background-color: var(--yellow-color-csir);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 120%;
+    transform: translateY(-50%);
+    color: var(--black-color-csir-nal);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+.custom-slider-container-facility .swiper-button-prev path,
+.custom-slider-container-facility .swiper-button-next path{
+  fill: var(--black-color-csir-nal);
+}
+.custom-slider-container-facility .swiper-button-prev:hover,
+.custom-slider-container-facility .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-slider-container-facility .swiper-button-prev {
+    left: 0px;
+}
+
+.custom-slider-container-facility .swiper-button-next {
+    right: 0px;
+}
+.custom-slider-container-facility .swiper-button-prev::after,
+.custom-slider-container-facility .swiper-button-next::after {
+    display: none;
+}
+li.list-dot-hp {
+  font-size: 18px;
+  font-weight: 600;
+}
+
