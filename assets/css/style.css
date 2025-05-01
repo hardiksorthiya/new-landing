@@ -1626,3 +1626,30 @@ li.list-dot-hp {
   display: flex;
   align-items: center;
 }
+/* director desk */
+
+.abo-csi-left-director:after {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 68%;
+  height: 100%;
+  background: var(--yellow-color-csir);
+  z-index: -2;
+  content: "";
+  border-radius: 0 50px 50px 0;
+}
+.about-image-director {
+  width: 75%;
+}
+.about-image-director img {
+  box-shadow: 2px 2px 10px gray;
+  border-radius: 100%;
+}
+.abo-csi-left-director .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+.col.li-hp-vision li {
+  margin-bottom: 25px;
+}
