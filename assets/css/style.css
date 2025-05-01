@@ -287,7 +287,7 @@ body > .skiptranslate {
   background-color: var(--fade-color-csir-nal);
   transition: left 0.3s ease-in-out;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 3;
 }
 .banner-text-hp {
   position: absolute;
@@ -1559,6 +1559,11 @@ img.career-pdf-icon-img {
 .custom-slider-container-facility .swiper-pagination {
   bottom: var(--swiper-pagination-bottom, -60px) !important;
 }
+.swiper.custom-swiper-facility .swiper-slide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .custom-slider-container-facility .swiper-button-prev,
 .custom-slider-container-facility .swiper-button-next {
     background-color: var(--yellow-color-csir);
@@ -1598,4 +1603,26 @@ li.list-dot-hp {
   font-size: 18px;
   font-weight: 600;
 }
+/* business */
 
+.ficon {
+  max-width: 48px;
+}
+.card-facility {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: none;
+}
+.card-facility .card-body {
+  padding: 0px 20px;
+}
+/* research */
+.image-business img {
+  width: 340px;
+  box-shadow: 2px 2px 10px #80808057;
+}
+.res-in-f .col-lg-3 {
+  display: flex;
+  align-items: center;
+}
