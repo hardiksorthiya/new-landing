@@ -610,6 +610,10 @@ img.back-make-india {
   font-size: 48px;
   font-weight: 600;
 }
+.image-and-text-box-csir-nal-hp a:hover h3.card-title-csir-hp {
+  color: var(--yellow-color-csir);
+  transition: 0.5s;
+}
 
 .pad-zero-hp {
   padding: 0 !important;
@@ -1652,4 +1656,52 @@ li.list-dot-hp {
 }
 .col.li-hp-vision li {
   margin-bottom: 25px;
+}
+/* expertise */
+.table-header-expert {
+  background: #f4f4f4;
+  padding: 15px;
+}
+.table-header-expert-body th {
+  background-color: var(--yellow-color-csir) !important;
+  color: var(--black-color-csir-nal) !important;
+}
+.scroll-container {
+  max-height: 3 * 160px; /* Approx. height of 3 rows */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profile-img-expert {
+  width: 80px;
+  object-fit: cover;
+}
+
+.arrow-btn-expert svg {
+  fill: black;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.profile-row {
+  display: none;
+}
+
+.profile-row.visible {
+  display: table-row;
+  border: transparent;
+}
+tbody#profileTable {
+  border: 1px solid #8080803b;
+}
+span.up-ar-ex {
+  position: absolute;
+  top: 5%;
+}
+span.down-ar-ex {
+  position: absolute;
+  bottom: 5%;
 }

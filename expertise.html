@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>our Experts | CSIR-NAL</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <!-- script -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <!-- language translate -->
+</head>
+
+<body id="about-csir">
+    <!-- header -->
+    <section class="header-csir-nal-hp">
+        <!-- Search Bar -->
+
+        <div id="searchBar" class="search-bar">
+            <div class="text-center h-text-s">What are you looking for?</div>
+            <div class="search-input-button">
+                <input type="text" placeholder="Search..." />
+                <button class="search-btn">Search</button>
+            </div>
+
+            <button class="close-btn" id="closeSearchBar">
+                <img src="assets/images/maki_cross.svg" alt="" />
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header class="custom-header bg-white py-2" id="header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Left menu icon -->
+                <div class="d-flex align-items-center csir-hp-menu">
+                    <span class="menu-icon me-3" id="menuToggle">
+                        <p class="mb-0">Menu</p>
+                        <span>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 14">
+                                <title>humbarg</title>
+                                <path d="M1,0H20a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H1A1,1,0,0,1,0,1H0A1,1,0,0,1,1,0Z" />
+                                <path d="M1,6H17a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H1A1,1,0,0,1,0,7H0A1,1,0,0,1,1,6Z" />
+                                <path d="M1,12H11a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H1a1,1,0,0,1-1-1H0A1,1,0,0,1,1,12Z" />
+                                <circle cx="23" cy="1" r="1" />
+                            </svg>
+                        </span>
+                    </span>
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="assets/images/CSIR-National_Aerospace_Laboratories_Logo.png" alt="Logo"
+                            class="logo" />
+                        <div class="ms-2">
+                            <h4 class="logo-name">CSIR-National Aerospace Laboratories</h4>
+                            <h5 class="logo-area">Bengaluru, India</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Right navigation -->
+                <nav class="first-hp-nav-menu d-flex align-items-center">
+                    <ul class="csir-first-menu list-unstyled d-flex mb-0">
+                        <li><a href="career.html" class="text-decoration-none">Career</a></li>
+                        <li><a href="partners.html" class="text-decoration-none">Partners</a></li>
+                        <li><a href="tender.html" class="text-decoration-none">Tenders</a></li>
+                        <li><a href="newsroom.html" class="text-decoration-none">News</a></li>
+                        <li><a href="services.html" class="text-decoration-none">Services</a></li>
+                        <li><a href="outreach.html" class="text-decoration-none">Outreach</a></li>
+                    </ul>
+                    <a href="#" id="searchToggle"
+                        class="text-decoration-none px-3 text-black d-flex align-items-center">Search
+                        <span class="position-relative">
+                            <span class="blur-bg-search"></span>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 13.51 13.5" style="width: 20px">
+                                <title>web</title>
+                                <path
+                                    d="M538.16,543.87c-.84.85-1.68,1.69-2.54,2.53a1.21,1.21,0,0,1-1.15.32,1.6,1.6,0,0,1-.79-.51,1.28,1.28,0,0,1,0-1.92c.79-.79,1.58-1.59,2.39-2.38a1.79,1.79,0,0,1,.61-.36,1.17,1.17,0,0,1,1,.17l1.08-1.08a4.5,4.5,0,1,1,.57.57l-1.08,1.07A1.27,1.27,0,0,1,538.16,543.87Zm4-9.87a3.75,3.75,0,1,0,3.85,3.64A3.74,3.74,0,0,0,542.16,534Z"
+                                    transform="translate(-533.25 -533.25)" />
+                            </svg>
+                        </span>
+                    </a>
+                    <!-- Google Translate Hidden -->
+                    <div id="google_translate_element"></div>
+
+                    <!-- Custom Language Dropdown (Static Icon) -->
+                    <div class="custom-dropdown">
+                        <img src="assets/images/languages.png" alt="Language">
+                        <!-- Default Language Icon -->
+                        <div class="dropdown-content">
+                            <div onclick="changeLanguage('en')">
+                                English
+                            </div>
+                            <div onclick="changeLanguage('hi')">
+                                हिन्दी
+                            </div>
+                            <div onclick="changeLanguage('kn')">
+                                ಕನ್ನಡ
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/CSIR-National_Aerospace_Laboratories_Logo.png" alt="Logo" class="logo" />
+                <span class="sidebar-close" id="closeSidebar">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"
+                        style="width: 20px">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill-opacity: 1;
+                                }
+                            </style>
+                        </defs>
+                        <title>cross</title>
+                        <path class="cls-1"
+                            d="M7.28,4.54,15,12.26l7.68-7.68a1.67,1.67,0,0,1,.6-.42A1.8,1.8,0,0,1,24,4a2,2,0,0,1,1.87,2.72,1.89,1.89,0,0,1-.41.6L17.68,15l7.78,7.78A1.81,1.81,0,0,1,26,24a2,2,0,0,1-2,2,1.94,1.94,0,0,1-.75-.12,2,2,0,0,1-.63-.42L15,17.74l-7.7,7.7a2,2,0,0,1-.59.41A1.78,1.78,0,0,1,6,26a2,2,0,0,1-1.87-2.72,2.06,2.06,0,0,1,.41-.6L12.32,15,4.54,7.22A1.81,1.81,0,0,1,4,6,2,2,0,0,1,6,4,1.86,1.86,0,0,1,7.28,4.54Z"
+                            transform="translate(-4 -4)" />
+                    </svg>
+                </span>
+            </div>
+            <div class="sidebar-links">
+                <a href="about_us.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>About us</a>
+                <a href="organisation_chart.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Organisation Chart</a>
+                <a href="history.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>History of NAL</a>
+                <a href="leaders.html"> <svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Our leaders</a>
+                <a href="mandate.html"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg" width="4.52"
+                        height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Our Mandate</a>
+                <a href="career.html" class="d-xl-none"><svg class="arrow-menu"
+                        xmlns="http://www.w3.org/2000/svg" width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Career</a>
+                <a href="partners.html" class="d-xl-none"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Partners</a>
+                <a href="tender.html" class="d-xl-none"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Tenders</a>
+                <a href="newsroom.html" class="d-xl-none"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>News</a>
+                <a href="services.html" class="d-xl-none"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Services</a>
+                <a href="outreach.html" class="d-xl-none"><svg class="arrow-menu" xmlns="http://www.w3.org/2000/svg"
+                        width="4.52" height="5.22" viewBox="0 0 4.52 5.22">
+                        <polygon points="4.53 2.61 0 0 0 5.22 4.53 2.61" />
+                    </svg>Outreach</a>
+            </div>
+        </div>
+    </section>
+    <!-- main section -->
+    <section class="about-csir-section mt-70 overflow-hidden position-relative mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-8  position-relative" data-aos="fade-up-right" data-aos-delay="500"
+                    data-aos-duration="700">
+                    <h2 class="page-title-heading-hp-csir">Progressing knowledge, influencing the future</h2>
+                    <p class="my-5">A scientist's profile generally encompasses information regarding their educational background,
+                        research interests, published works, and professional experience.</p>
+                </div>
+            </div>
+            <!-- Search Inputs -->
+             <div class="row mb-3">
+                <h5 class="fw-bold mb-4">Search Profile</h5>
+             </div>
+             <div class="table-header-expert">
+                <div class="row g-2">
+                    <div class="col-md-2">
+                      <input type="text" id="searchName" class="form-control" placeholder="For People" />
+                    </div>
+                    <div class="col-md-2">
+                      <input type="text" id="searchExpertise" class="form-control" placeholder="For Expertise" />
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-dark" onclick="filterTable()">Search 🔍</button>
+                      <button class="btn btn-outline-secondary" onclick="clearSearch()">Clear ✖️</button></div>
+                  </div>
+                
+             </div>
+           
+              <!-- Table Header -->
+              <table class="table align-middle mb-0 mt-2">
+                <thead class="table-header-expert-body">
+                <tr>
+                  <th style="width: 5%;">Sl No.</th>
+                  <th style="width: 95%;">Title</th>
+                </tr>
+                </thead>
+              </table>
+            
+              <!-- Scrollable Table Body -->
+              <div class="scroll-container">
+                <table class="table align-middle">
+                  <tbody id="profileTable">
+                    <!-- Rows will be dynamically added -->
+                  </tbody>
+                </table>
+                <!-- Scroll Arrows -->
+              <div class="d-flex justify-content-end gap-2 mt-2 arrow-btn-expert">
+                <span class="up-ar-ex" onclick="scrollProfiles('up')">
+                  <!-- Up Arrow SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                  </svg>
+                </span>
+                <span class="down-ar-ex" onclick="scrollProfiles('down')">
+                  <!-- Down Arrow SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                  </svg>
+                </span>
+              </div>
+              </div>
+            
+              
+
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="csir-footer overflow-hidden" style="background-color: #00002e" data-aos="fade-up"
+        data-aos-duration="300">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-4 col-md-6 col-lg-5">
+                    <h5 class="footer-title-csir">External Links</h5>
+                    <div class="d-md-flex" style="justify-content: space-between;">
+                        <ul class="footer-external-links">
+                            <li><a href="#" class="text-white">Director Report</a></li>
+                            <li>
+                                <a href="#" class="text-white">Past Leader</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white">Vigilance</a>
+                            </li>
+                            <li><a href="#" class="text-white">Medical</a></li>
+                            <li><a href="#" class="text-white">AEISS</a></li>
+                            <li><a href="#" class="text-white">Guest House</a></li>
+                            <li>
+                                <a href="#" class="text-white">AnalytiCSIR</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-external-links">
+                            <li><a href="#" class="text-white">RTI</a></li>
+                            <li>
+                                <a href="#" class="text-white">ICC</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white">Webcast Policy</a>
+                            </li>
+                            <li><a href="#" class="text-white">Cyber Jagrookta</a></li>
+                            <li><a href="#" class="text-white">CSIR Website</a></li>
+                            <li><a href="#" class="text-white">PWA</a></li>
+                            <li>
+                                <a href="#" class="text-white">e-Office</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-3">
+                    <h5 class="footer-title-csir text-lg-center">Social Media</h5>
+                    <div class="social-icons d-flex flex-lg-column align-items-center justify-content-center">
+                        <a href="#" target="_blank"><img src="assets/images/footer/twitter.png" alt="Twitter" /></a>
+                        <a href="#" target="_blank"><img src="assets/images/footer/facebook.png" alt="Facebook" /></a>
+                        <a href="#" target="_blank"><img src="assets/images/footer/youtube (1).png" alt="YouTube" /></a>
+                        <a href="#" target="_blank"><img src="assets/images/footer/whatsapp.png" alt="WhatsApp" /></a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <h5 class="footer-title-csir text-lg-end">Contact</h5>
+                    <div class="d-flex align-items-start text-decoration-none">
+                        <img src="assets/images/CSIR-National_Aerospace_Laboratories_Logo_white.png" alt="Logo"
+                            class="logo" />
+                        <div class="ms-2">
+                            <h4 class="footer-title-logo">
+                                National Aerospace Laboratories
+                            </h4>
+                            <p class="add-ftr-detail">
+                                HAL Airport Road,<br />Bangalore 560 017, India.
+                            </p>
+                            <p class="add-ftr-detail">Tel: 91-80-25273351-54 (Kodihalli),</p>
+                            <p class="add-ftr-detail">25223351-54 (Belur).</p>
+                            <p class="add-ftr-detail my-2">GSTIN of NAL 29AAATC2716R1ZB</p>
+                            <div class="qr-code d-flex">
+                                <div class="text-center">
+                                    <img src="assets/images/footer/Kodihalli.png" alt="Kodihalli" />
+                                    <p class="scnner-text">Kodihalli</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/images/footer/Belur.png" alt="Belur" />
+                                    <p class="scnner-text">Belur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-bottam -->
+    <section class="footer-bottam-band">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-3 col-md-12">
+                    <h5 class="mb-0">Copyright 2025 nal.res.in. All rights reserved</h5>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-8 overflow-hidden">
+                    <div class="custom-slider-container">
+                        <div class="swiper-wrapper">
+                            <!-- 10 images -->
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png"
+                                    alt="Image 1"></div>
+                            <div class="swiper-slide custom-slider-slide"><img
+                                    src="assets/images/footer/India Gov in.png" alt="Image 2"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/ITU.png"
+                                    alt="Image 3"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/One CSIR.png"
+                                    alt="Image 4"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Digital.png"
+                                    alt="Image 5"></div>
+                            <div class="swiper-slide custom-slider-slide"><img src="assets/images/footer/Jigyasa.png"
+                                    alt="Image 1"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-lg-3 col-md-4">
+                    <div class="top-up-home d-flex">
+                        <a href="#hero"><img src="assets/images/footer/arrow.png" alt="" /></a>
+                        <a href="#"><img src="assets/images/footer/home.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <script>
+        let currentSortColumn = -1;
+        let ascending = true;
+
+        function searchTable() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let table = document.getElementById("careersTable");
+            let rows = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < rows.length; i++) {
+                let rowText = rows[i].textContent.toLowerCase();
+                rows[i].style.display = rowText.includes(input) ? "" : "none";
+            }
+
+            toggleClearButton();
+        }
+
+        function clearSearch() {
+            document.getElementById("searchInput").value = "";
+            searchTable();
+            document.getElementById("clearBtn").style.display = "none";
+        }
+
+        function toggleClearButton() {
+            let input = document.getElementById("searchInput").value;
+            let clearBtn = document.getElementById("clearBtn");
+            clearBtn.style.display = input.length > 0 ? "inline-block" : "none";
+        }
+
+        function sortTable(colIndex) {
+            let table = document.getElementById("careersTable");
+            let rows = Array.from(table.rows).slice(1);
+
+            if (currentSortColumn === colIndex) {
+                ascending = !ascending;
+            } else {
+                ascending = true;
+                currentSortColumn = colIndex;
+            }
+
+            rows.sort((rowA, rowB) => {
+                let cellA = rowA.cells[colIndex].textContent.trim();
+                let cellB = rowB.cells[colIndex].textContent.trim();
+                return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+            });
+
+            rows.forEach(row => table.appendChild(row));
+
+            updateSortIcons(colIndex);
+        }
+
+        function updateSortIcons(colIndex) {
+            document.querySelectorAll(".sort-icon").forEach(icon => icon.classList.remove("active"));
+            document.getElementById(ascending ? `sort-up-${colIndex}` : `sort-down-${colIndex}`).classList.add("active");
+        }
+    </script>
+
+    <script>
+  const profiles = [
+    {
+      name: "Dr. Abanti Nag",
+      expertise: "Thermoelectric Materials; Stealth Materials; Functional Ceramics",
+      title: "Sr. Principal Scientist - Materials Science Division",
+      image: "assets/images/experts/ambantinag.png",
+      link: "abanti.html"
+    },
+    {
+      name: "Dr. Anand G",
+      expertise: "Embedded System Technologies",
+      title: "Sr. Scientist - Aerospace Electronics Division",
+      image: "https://via.placeholder.com/80"
+    },
+    {
+      name: "Dr. Nisha Mehta",
+      expertise: "Nanomaterials, Coatings",
+      title: "Scientist - Nano Research Division",
+      image: "https://via.placeholder.com/80"
+    },
+    {
+      name: "Dr. Vinay Patel",
+      expertise: "Semiconductor Physics, Sensors",
+      title: "Scientist - Applied Physics",
+      image: "https://via.placeholder.com/80"
+    },
+    {
+      name: "Dr. Sujata Rao",
+      expertise: "Biotechnology, Genetic Engineering",
+      title: "Sr. Scientist - Biotech Division",
+      image: "https://via.placeholder.com/80"
+    },
+    {
+      name: "Dr. Mehul Shah",
+      expertise: "Heat Transfer, Thermodynamics",
+      title: "Scientist - Mechanical Division",
+      image: "https://via.placeholder.com/80"
+    }
+  ];
+
+  let filteredProfiles = [...profiles];
+  let currentIndex = 0;
+  const visibleCount = 3;
+
+  function renderTable() {
+    const tbody = document.getElementById("profileTable");
+    tbody.innerHTML = "";
+
+    filteredProfiles.forEach((profile, index) => {
+      const isVisible = index >= currentIndex && index < currentIndex + visibleCount;
+
+      const row = document.createElement("tr");
+      row.className = "profile-row" + (isVisible ? " visible" : "");
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>
+          <div class="d-flex align-items-start gap-3">
+            <img src="${profile.image}" class="profile-img-expert" alt="${profile.name}" />
+            <a href="${profile.link}" class="text-black">
+              <strong>${profile.name}</strong><br />
+              ${profile.title}<br />
+              <strong>Area of Expertise:</strong> ${profile.expertise}
+            </a>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  function scrollProfiles(direction) {
+    if (direction === "down") {
+      if (currentIndex + visibleCount < filteredProfiles.length) {
+        currentIndex++;
+      }
+    } else if (direction === "up") {
+      if (currentIndex > 0) {
+        currentIndex--;
+      }
+    }
+    renderTable();
+  }
+
+  function filterTable() {
+    const nameVal = document.getElementById("searchName").value.toLowerCase();
+    const expertiseVal = document.getElementById("searchExpertise").value.toLowerCase();
+
+    filteredProfiles = profiles.filter(p =>
+      p.name.toLowerCase().includes(nameVal) &&
+      p.expertise.toLowerCase().includes(expertiseVal)
+    );
+
+    currentIndex = 0;
+    renderTable();
+  }
+
+  function clearSearch() {
+    document.getElementById("searchName").value = "";
+    document.getElementById("searchExpertise").value = "";
+    filteredProfiles = [...profiles];
+    currentIndex = 0;
+    renderTable();
+  }
+
+  // Initial render
+  renderTable();
+</script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".custom-slider-container", {
+                slidesPerView: 5,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                speed: 600,
+                breakpoints: {
+                    1200: { slidesPerView: 5 },
+                    992: { slidesPerView: 4 },
+                    768: { slidesPerView: 3 },
+                    576: { slidesPerView: 2 },
+                    320: { slidesPerView: 2 },
+                },
+            });
+        });
+    </script>
+    <script>
+        // animation
+
+        AOS.init();
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/element.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+</body>
+
+</html>
