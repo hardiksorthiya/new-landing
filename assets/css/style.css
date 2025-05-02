@@ -30,8 +30,8 @@ a {
   text-decoration: none !important;
 }
 
-p {
-  font-size: 12pt;
+p,div, li, ul, span {
+  font-size: 18px;
 }
 
 a:hover,
@@ -1680,7 +1680,7 @@ li.list-dot-hp {
 
 .arrow-btn-expert svg {
   fill: black;
-  background-color: #f1c40f;
+  background-color: var(--yellow-color-csir);
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
@@ -1704,4 +1704,196 @@ span.up-ar-ex {
 span.down-ar-ex {
   position: absolute;
   bottom: 5%;
+}
+tr.profile-row:hover a strong.profile-name {
+  color: var(--yellow-color-csir);
+}
+.icon-expert-main svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+/* career 2 */
+h3.career-two-sub-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 70px;
+}
+p.career-heading-advertisement {
+  background: #f4f4f4;
+  padding: 20px 10px;
+  color: black;
+  font-weight: 400;
+  text-align: left;
+}
+p.adv-date-career {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.custom-slider-container-career .swiper-button-prev,
+.custom-slider-container-career .swiper-button-next {
+    border: 1px solid gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 130%;
+    transform: translateY(-50%);
+    color: var(--black-color-csir-nal);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+.custom-slider-container-career .swiper-button-prev path,
+.custom-slider-container-career .swiper-button-next path{
+  fill: var(--black-color-csir-nal);
+}
+.custom-slider-container-career .swiper-button-prev:hover,
+.custom-slider-container-career .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-slider-container-career .swiper-button-prev {
+  left: 80%;
+}
+
+.custom-slider-container-career .swiper-button-next {
+    right: 0px;
+}
+.custom-slider-container-career .swiper-button-prev::after,
+.custom-slider-container-career .swiper-button-next::after {
+    display: none;
+}
+.custom-slider-container-career .swiper-slide{
+  background: var(--yellow-color-csir);
+  padding: 0;
+}
+
+/* out reach */
+
+.out-reach-image img {
+  box-shadow: 2px 2px 5px #8080803b, -2px -2px 5px #8080803b;
+  max-width: 360px;
+}
+.out-reach-image {
+  display: block;
+}
+
+/* services */
+.central-circle img {
+  max-width: 310px;
+  box-shadow: 2px 2px 10px gray;
+  border-radius: 100%;
+  width: 100%;
+}
+.service-circle img {
+  width: 100%;
+  max-width: 90px;
+  background: linear-gradient(45deg, #f8ab13, #f2801a);
+  border-radius: 100%;
+  padding: 10px;
+}
+.service-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.circle-service-image-making {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.st-1 {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  flex-direction: row-reverse;
+}
+.st-2 {
+  position: absolute;
+  top: 61%;
+  left: 10%;
+  flex-direction: row-reverse;
+}
+.st-3 {
+  flex-direction: column;
+}
+.st-4 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+}
+.st-5 {
+  position: absolute;
+  top: 61%;
+  right: 10%;
+}
+.st-2 .s-nu {
+  position: relative;
+  top: 55px;
+  left: 13px;
+}
+.s-nu {
+  background: linear-gradient(45deg, #f8ab13, #f2801a);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: white;
+  font-style: italic;
+}
+.st-5 .s-nu {
+  position: relative;
+  top: 55px;
+  right: 13px;
+}
+.ser-strip:before {
+  content: "";
+  background: linear-gradient(45deg, #f69e14, #f06a1e);
+  width: 32px;
+  position: absolute;
+  height: 10px;
+  display: block;
+  top: -5px;
+  right: -20px
+}
+
+.ser-strip {
+  position: relative;
+  z-index: -1;
+}
+.st-2 .ser-strip {
+  transform: rotate(320deg);
+  top: 38px;
+  left: 6px;
+}
+.st-3 .ser-strip {
+  transform: rotate(90deg); 
+}
+.st-5 .ser-strip {
+  transform: rotate(40deg);
+  top: 35px;
+  left: -12px;
+}
+.half-ring {
+  position: absolute;
+  bottom: 6%;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+}
+.half-ring svg {
+  width: 77%;
+}
+.hp-list-style-service {
+  line-height: 60px;
+}
+.hp-list-style-service li {
+  font-size: 24px;
 }
