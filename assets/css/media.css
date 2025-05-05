@@ -80,7 +80,7 @@
  }
 
 
- @media (max-width: 430px) {
+ @media (max-width: 767px) {
    .social-icons a img {
      width: 50px;
      margin: 20px;
@@ -130,6 +130,36 @@ a#searchToggle {
 section.about-csir-section {
   margin-top: 110px;
 }
+.central-circle img {
+  max-width: 150px;
+}
+.service-circle img {
+  max-width: 60px;
+}
+.half-ring {
+  bottom: -16%;
+}
+.half-ring svg {
+  width: 70%;
+}
+.st-2 .s-nu {
+  position: relative;
+  top: 56px;
+  left: 21px;
+}
+.st-2 .ser-strip {
+  transform: rotate(310deg);
+  top: 38px;
+  left: 12px;
+}
+.st-5 .ser-strip {
+  transform: rotate(50deg);
+  top: 30px;
+  left: -12px;
+}
+.st-5 .s-nu {
+  top: 53px; 
+}
  }
 
 
@@ -170,13 +200,11 @@ section.about-csir-section {
  height: 330px;
 }
 }
- @media (min-width: 1200px) {
+ @media (min-width: 1201px) {
  .slider-container {
   height: 90vh;
 }
- }
- @media (min-width:1025px) {
- .mandate-csir-section, .about-csir-section {
+.mandate-csir-section, .about-csir-section {
   height: 100vh;
 }
  }
