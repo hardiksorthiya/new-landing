@@ -1412,7 +1412,7 @@ span.blur-bg-search:after {
 }
 
 .career-th {
-  background-color: #f1c40f !important;
+  background-color: var(--yellow-color-csir) !important;
   color: #000 !important;
   cursor: pointer;
   user-select: none;
@@ -1680,7 +1680,7 @@ li.list-dot-hp {
 
 .arrow-btn-expert svg {
   fill: black;
-  background-color: #f1c40f;
+  background-color: var(--yellow-color-csir);
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
