@@ -401,62 +401,7 @@
     </section>
 
     <!-- script -->
-    <script>
-        let currentSortColumn = -1;
-        let ascending = true;
-
-        function searchTable() {
-            let input = document.getElementById("searchInput").value.toLowerCase();
-            let table = document.getElementById("careersTable");
-            let rows = table.getElementsByTagName("tr");
-
-            for (let i = 1; i < rows.length; i++) {
-                let rowText = rows[i].textContent.toLowerCase();
-                rows[i].style.display = rowText.includes(input) ? "" : "none";
-            }
-
-            toggleClearButton();
-        }
-
-        function clearSearch() {
-            document.getElementById("searchInput").value = "";
-            searchTable();
-            document.getElementById("clearBtn").style.display = "none";
-        }
-
-        function toggleClearButton() {
-            let input = document.getElementById("searchInput").value;
-            let clearBtn = document.getElementById("clearBtn");
-            clearBtn.style.display = input.length > 0 ? "inline-block" : "none";
-        }
-
-        function sortTable(colIndex) {
-            let table = document.getElementById("careersTable");
-            let rows = Array.from(table.rows).slice(1);
-
-            if (currentSortColumn === colIndex) {
-                ascending = !ascending;
-            } else {
-                ascending = true;
-                currentSortColumn = colIndex;
-            }
-
-            rows.sort((rowA, rowB) => {
-                let cellA = rowA.cells[colIndex].textContent.trim();
-                let cellB = rowB.cells[colIndex].textContent.trim();
-                return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
-            });
-
-            rows.forEach(row => table.appendChild(row));
-
-            updateSortIcons(colIndex);
-        }
-
-        function updateSortIcons(colIndex) {
-            document.querySelectorAll(".sort-icon").forEach(icon => icon.classList.remove("active"));
-            document.getElementById(ascending ? `sort-up-${colIndex}` : `sort-down-${colIndex}`).classList.add("active");
-        }
-    </script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var swiper = new Swiper(".custom-swiper-facility", {
@@ -484,9 +429,6 @@
                 },
             });
         });
-    </script>
-
-
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

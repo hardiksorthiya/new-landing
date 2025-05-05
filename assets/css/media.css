@@ -56,6 +56,10 @@
 .about-image-director {
   width: 30%;
 }
+.out-reach-image {
+  display: flex;
+  justify-content: center;
+}
  }
 
 
